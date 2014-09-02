@@ -1,0 +1,9 @@
+C:\Share\CoffeeMachine\CoffeeMachineP\bin\Debug\CoffeeMachineP.dll
+C:\Share\CoffeeMachine\CoffeeMachineP\bin\Debug\CoffeeMachineP.pdb
+C:\Share\CoffeeMachine\CoffeeMachineP\bin\Debug\CashMachine.dll
+C:\Share\CoffeeMachine\CoffeeMachineP\bin\Debug\MixMachine.dll
+C:\Share\CoffeeMachine\CoffeeMachineP\bin\Debug\CashMachine.pdb
+C:\Share\CoffeeMachine\CoffeeMachineP\bin\Debug\MixMachine.pdb
+C:\Share\CoffeeMachine\CoffeeMachineP\obj\Debug\CoffeeMachine.csprojResolveAssemblyReference.cache
+C:\Share\CoffeeMachine\CoffeeMachineP\obj\Debug\CoffeeMachineP.dll
+C:\Share\CoffeeMachine\CoffeeMachineP\obj\Debug\CoffeeMachineP.pdb

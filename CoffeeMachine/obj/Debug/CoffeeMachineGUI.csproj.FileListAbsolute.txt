@@ -1,0 +1,19 @@
+C:\Users\Администратор\Documents\Visual Studio 2012\Projects\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.exe.config
+C:\Share\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.exe.config
+C:\Share\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.exe
+C:\Share\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.pdb
+C:\Share\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachineP.dll
+C:\Share\CoffeeMachine\CoffeeMachine\bin\Debug\CashMachine.dll
+C:\Share\CoffeeMachine\CoffeeMachine\bin\Debug\MixMachine.dll
+C:\Share\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachineP.pdb
+C:\Share\CoffeeMachine\CoffeeMachine\bin\Debug\CashMachine.pdb
+C:\Share\CoffeeMachine\CoffeeMachine\bin\Debug\MixMachine.pdb
+C:\Share\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachineGUI.csprojResolveAssemblyReference.cache
+C:\Share\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.GUI.resources
+C:\Share\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.Properties.Resources.resources
+C:\Share\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachineGUI.csproj.GenerateResource.Cache
+C:\Share\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.exe
+C:\Share\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.pdb
+H:\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.exe.config
+H:\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.exe
+H:\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.pdb

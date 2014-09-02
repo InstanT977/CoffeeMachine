@@ -1,0 +1,5 @@
+C:\Share\CoffeeMachine\MixMachine\bin\Debug\MixMachine.dll
+C:\Share\CoffeeMachine\MixMachine\bin\Debug\MixMachine.pdb
+C:\Share\CoffeeMachine\MixMachine\obj\Debug\MixMachine.dll
+C:\Share\CoffeeMachine\MixMachine\obj\Debug\MixMachine.pdb
+C:\Share\CoffeeMachine\MixMachine\obj\Debug\MixMachine.csprojResolveAssemblyReference.cache

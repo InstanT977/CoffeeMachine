@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="CoffeeMachine.Display">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAQAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Display.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeMachine.InputButton">
+    <Position X="4" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAACAAAAAAAAAAAAAQAAAABAAAAA=</HashCode>
+      <FileName>InputButton.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_owner" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CoffeeMachine.InputPanel">
+    <Position X="0.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAQAAAAAAIAAAABAAAAAAAAAAIAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>InputPanel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_buttonList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CoffeeMachine.GUI">
+    <Position X="1.75" Y="1" Width="2.25" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAAEAAAAACAAAACAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_coffeeMachine" />
+      <Field Name="_inputPanel" />
+      <Field Name="_display" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CoffeeMachineP.CoffeeMachine">
+    <Position X="5" Y="2.25" Width="2.5" />
+    <AssociationLine Name="_acceptor" Type="CashMachine.IAcceptor" ManuallyRouted="true">
+      <Path>
+        <Point X="7.5" Y="2.655" />
+        <Point X="7.64" Y="2.636" />
+        <Point X="10.906" Y="2.636" />
+        <Point X="10.906" Y="2.373" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Field Name="_coinKeeper" />
+      <Field Name="_state" />
+      <Field Name="_acceptor" />
+      <Field Name="_mixMachine" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CoffeeMachine.CashKeeper">
+    <Position X="9.25" Y="3" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CoffeeMachine.StatesOfCoffeeMachine">
+    <Position X="7.75" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CashMachine.Acceptor">
+    <Position X="12.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Field Name="_banknoteChecker" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_banknoteList" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CoffeeMachine.Banknote">
+    <Position X="16.75" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CoffeeMachine.BanknoteChecker">
+    <Position X="13.25" Y="4.25" Width="2.25" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Field Name="_banknote" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CoffeeMachine.Component">
+    <Position X="14" Y="7.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CoffeeMachine.CoupContainer">
+    <Position X="8.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CoffeeMachine.Ingridient">
+    <Position X="13.25" Y="10" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CoffeeMachine.MixAndPourMachine">
+    <Position X="7.5" Y="12.5" Width="2.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Field Name="_coupContainer" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_reservoirs" />
+      <Field Name="_recipes" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CoffeeMachine.Recipe">
+    <Position X="10.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsCollectionAssociation>
+      <Field Name="_ingridients" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CoffeeMachine.Reservoir">
+    <Position X="16.5" Y="7.25" Width="2.25" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Field Name="_drink" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="CoffeeMachineP.ICoffeeMach">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="CashMachine.IAcceptor">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="MixMachine.IMixMachine">
+    <Position X="5.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

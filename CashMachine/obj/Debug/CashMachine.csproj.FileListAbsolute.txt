@@ -1,0 +1,5 @@
+C:\Share\CoffeeMachine\CashMachine\bin\Debug\CashMachine.dll
+C:\Share\CoffeeMachine\CashMachine\bin\Debug\CashMachine.pdb
+C:\Share\CoffeeMachine\CashMachine\obj\Debug\CashMachine.dll
+C:\Share\CoffeeMachine\CashMachine\obj\Debug\CashMachine.pdb
+C:\Share\CoffeeMachine\CashMachine\obj\Debug\CashMachine.csprojResolveAssemblyReference.cache
