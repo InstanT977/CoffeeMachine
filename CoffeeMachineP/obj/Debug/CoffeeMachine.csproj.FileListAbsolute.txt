@@ -7,3 +7,12 @@ C:\Share\CoffeeMachine\CoffeeMachineP\bin\Debug\MixMachine.pdb
 C:\Share\CoffeeMachine\CoffeeMachineP\obj\Debug\CoffeeMachine.csprojResolveAssemblyReference.cache
 C:\Share\CoffeeMachine\CoffeeMachineP\obj\Debug\CoffeeMachineP.dll
 C:\Share\CoffeeMachine\CoffeeMachineP\obj\Debug\CoffeeMachineP.pdb
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\bin\Debug\CoffeeMachineP.dll
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\bin\Debug\CoffeeMachineP.pdb
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\bin\Debug\CashMachine.dll
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\bin\Debug\MixMachine.dll
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\bin\Debug\CashMachine.pdb
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\bin\Debug\MixMachine.pdb
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\obj\Debug\CoffeeMachine.csprojResolveAssemblyReference.cache
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\obj\Debug\CoffeeMachineP.dll
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\obj\Debug\CoffeeMachineP.pdb

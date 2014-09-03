@@ -4,7 +4,7 @@ using CashMachine;
 using CoffeeMachine;
 using MixMachine;
 
-namespace CoffeeMachineP
+namespace Machine
 {
    public class CoffeeMachine:ICoffeeMach
     {

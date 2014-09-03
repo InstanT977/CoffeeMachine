@@ -8,12 +8,17 @@ namespace CoffeeMachine
 {
     public class InputButton
     {
-        public int _key;
-        public InputPanel _owner;
-        public void Press()
+        public InputButton(char key)
         {
-            
+            _key = key.ToString();
         }
+        private readonly string _key;
+
+        public string Press()
+        {
+            return _key;
+        }
+
         public void Release()
         {
             

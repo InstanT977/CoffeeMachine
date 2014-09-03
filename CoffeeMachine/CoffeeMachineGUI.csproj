@@ -66,6 +66,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
@@ -94,6 +95,33 @@
       <Project>{2B53EC2B-A50D-44A0-A396-A960CF88BE6A}</Project>
       <Name>MixMachine</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cofee3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cofee4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coup.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cup.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panelWithCoup.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inputPanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

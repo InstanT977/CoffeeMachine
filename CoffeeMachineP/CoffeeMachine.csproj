@@ -7,7 +7,7 @@
     <ProjectGuid>{FD8B5973-3D59-423B-B536-BDDBF654BA22}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CoffeeMachineP</RootNamespace>
+    <RootNamespace>CoffeeMachine</RootNamespace>
     <AssemblyName>CoffeeMachineP</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
