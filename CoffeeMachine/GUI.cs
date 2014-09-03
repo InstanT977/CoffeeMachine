@@ -25,9 +25,10 @@ namespace CoffeeMachine
 
         private void InitializeMainComponents()
         {
-            _display = new Display();
-            _inputPanel = new InputPanel();
+            _display = new Display(this);
+            _inputPanel = new InputPanel(this);
             _coffeeMachine = new Machine.CoffeeMachine();
+            _inputPanel.ApplyButtonClicked += _coffeeMachine.CheckInputData;
         }
 
         private void pictureCup_Click(object sender, EventArgs e)
@@ -40,66 +41,10 @@ namespace CoffeeMachine
             var btn = sender as Button;
             if (btn != null)
             {
-                var code = (int)btn.Tag;
+                int code = Convert.ToInt32(btn.Tag.ToString());
                 _inputPanel.ReceiveKey(code);
             }
         }
-
-        private void uiInputButton1_Click(object sender, EventArgs e)
-        {
-            _inputPanel.ReceiveKey(1);
-        }
-
-        private void uiInputButton2_Click(object sender, EventArgs e)
-        {
-            _inputPanel.ReceiveKey(2);
-        }
-
-        private void uiInputButton3_Click(object sender, EventArgs e)
-        {
-            _inputPanel.ReceiveKey(3);
-        }
-
-        private void uiInputButton4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void uiInputButton5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uiInputButton6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uiInputButton7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uiInputButton8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uiInputButton9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uiInputButton_T1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uiInputButton0_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void uiInputButton_T2_Click(object sender, EventArgs e)
         {
 

@@ -8,9 +8,9 @@ namespace CoffeeMachine
 {
     public class InputButton
     {
-        public InputButton(char key)
+        public InputButton(string key)
         {
-            _key = key.ToString();
+            _key = key;
         }
         private readonly string _key;
 

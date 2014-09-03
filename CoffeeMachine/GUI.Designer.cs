@@ -1,4 +1,6 @@
-﻿namespace CoffeeMachine
+﻿using System.Drawing;
+
+namespace CoffeeMachine
 {
     partial class GUI
     {
@@ -29,9 +31,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
-            this.PanelBut = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.DepositCountLabel = new System.Windows.Forms.Label();
+            this.uiDisplayDepositCount = new System.Windows.Forms.Label();
             this.uiInputPanel = new System.Windows.Forms.Panel();
             this.uiInputButton_T2 = new System.Windows.Forms.Button();
             this.uiInputButton0 = new System.Windows.Forms.Button();
@@ -51,47 +51,30 @@
             this.pictureCup = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.uiMainPanelPicture = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.uiDisplayUserInformation = new System.Windows.Forms.Button();
+            this.uiDisplayInput = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.uiInputPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiMainPanelPicture)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PanelBut
+            // uiDisplayDepositCount
             // 
-            this.PanelBut.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.PanelBut.Font = new System.Drawing.Font("MS Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PanelBut.ForeColor = System.Drawing.Color.Red;
-            this.PanelBut.Location = new System.Drawing.Point(342, 73);
-            this.PanelBut.Name = "PanelBut";
-            this.PanelBut.Size = new System.Drawing.Size(194, 41);
-            this.PanelBut.TabIndex = 13;
-            this.PanelBut.Text = "Пожалуйста, вставьте деньги";
-            this.PanelBut.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button8.ForeColor = System.Drawing.Color.Red;
-            this.button8.Location = new System.Drawing.Point(355, 132);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(167, 35);
-            this.button8.TabIndex = 14;
-            this.button8.Text = "Депозит:";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // DepositCountLabel
-            // 
-            this.DepositCountLabel.AutoSize = true;
-            this.DepositCountLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DepositCountLabel.ForeColor = System.Drawing.Color.Red;
-            this.DepositCountLabel.Location = new System.Drawing.Point(481, 143);
-            this.DepositCountLabel.Name = "DepositCountLabel";
-            this.DepositCountLabel.Size = new System.Drawing.Size(13, 13);
-            this.DepositCountLabel.TabIndex = 15;
-            this.DepositCountLabel.Text = "0";
+            this.uiDisplayDepositCount.AutoSize = true;
+            this.uiDisplayDepositCount.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.uiDisplayDepositCount.ForeColor = System.Drawing.Color.Red;
+            this.uiDisplayDepositCount.Location = new System.Drawing.Point(128, 41);
+            this.uiDisplayDepositCount.Name = "uiDisplayDepositCount";
+            this.uiDisplayDepositCount.Size = new System.Drawing.Size(13, 13);
+            this.uiDisplayDepositCount.TabIndex = 15;
+            this.uiDisplayDepositCount.Text = "0";
             // 
             // uiInputPanel
             // 
@@ -110,10 +93,9 @@
             this.uiInputPanel.Controls.Add(this.uiExitButton);
             this.uiInputPanel.Controls.Add(this.uiInformationButton);
             this.uiInputPanel.Controls.Add(this.uiInputButton1);
-            this.uiInputPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiInputPanel.Location = new System.Drawing.Point(335, 178);
+            this.uiInputPanel.Location = new System.Drawing.Point(335, 172);
             this.uiInputPanel.Name = "uiInputPanel";
-            this.uiInputPanel.Size = new System.Drawing.Size(206, 265);
+            this.uiInputPanel.Size = new System.Drawing.Size(206, 274);
             this.uiInputPanel.TabIndex = 24;
             // 
             // uiInputButton_T2
@@ -128,7 +110,7 @@
             this.uiInputButton_T2.Tag = "11";
             this.uiInputButton_T2.Text = "#";
             this.uiInputButton_T2.UseVisualStyleBackColor = true;
-            this.uiInputButton_T2.Click += new System.EventHandler(this.uiInputButton_T2_Click);
+            this.uiInputButton_T2.Click += new System.EventHandler(this.UiInputButtonClick);
             // 
             // uiInputButton0
             // 
@@ -139,6 +121,7 @@
             this.uiInputButton0.Name = "uiInputButton0";
             this.uiInputButton0.Size = new System.Drawing.Size(46, 39);
             this.uiInputButton0.TabIndex = 0;
+            this.uiInputButton0.Tag = "0";
             this.uiInputButton0.Text = "0";
             this.uiInputButton0.UseVisualStyleBackColor = true;
             this.uiInputButton0.Click += new System.EventHandler(this.UiInputButtonClick);
@@ -155,7 +138,7 @@
             this.uiInputButton_T1.Tag = "10";
             this.uiInputButton_T1.Text = "*";
             this.uiInputButton_T1.UseVisualStyleBackColor = true;
-            this.uiInputButton_T1.Click += new System.EventHandler(this.uiInputButton_T1_Click);
+            this.uiInputButton_T1.Click += new System.EventHandler(this.UiInputButtonClick);
             // 
             // uiInputButton9
             // 
@@ -358,31 +341,103 @@
             this.uiMainPanelPicture.TabIndex = 1;
             this.uiMainPanelPicture.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.uiDisplayInput);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.uiDisplayDepositCount);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.uiDisplayUserInformation);
+            this.panel1.Location = new System.Drawing.Point(335, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(194, 178);
+            this.panel1.TabIndex = 25;
+            // 
+            // uiDisplayUserInformation
+            // 
+            this.uiDisplayUserInformation.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.uiDisplayUserInformation.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.uiDisplayUserInformation.FlatAppearance.BorderSize = 3;
+            this.uiDisplayUserInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiDisplayUserInformation.Location = new System.Drawing.Point(16, 61);
+            this.uiDisplayUserInformation.Name = "uiDisplayUserInformation";
+            this.uiDisplayUserInformation.Size = new System.Drawing.Size(161, 37);
+            this.uiDisplayUserInformation.TabIndex = 16;
+            this.uiDisplayUserInformation.UseVisualStyleBackColor = false;
+            // 
+            // uiDisplayInput
+            // 
+            this.uiDisplayInput.AutoSize = true;
+            this.uiDisplayInput.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.uiDisplayInput.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiDisplayInput.ForeColor = System.Drawing.Color.Red;
+            this.uiDisplayInput.Location = new System.Drawing.Point(38, 102);
+            this.uiDisplayInput.Name = "uiDisplayInput";
+            this.uiDisplayInput.Size = new System.Drawing.Size(0, 19);
+            this.uiDisplayInput.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(24, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Внесено:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(16, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 37);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button2.FlatAppearance.BorderSize = 3;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(16, 94);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(161, 37);
+            this.button2.TabIndex = 16;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 585);
             this.ControlBox = false;
-            this.Controls.Add(this.uiInputPanel);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.uiInputPanel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureCup);
-            this.Controls.Add(this.DepositCountLabel);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.PanelBut);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.uiMainPanelPicture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Coffee Machine";
             this.uiInputPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiMainPanelPicture)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -390,9 +445,6 @@
 
         private System.Windows.Forms.PictureBox uiMainPanelPicture;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button PanelBut;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label DepositCountLabel;
         private System.Windows.Forms.PictureBox pictureCup;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button uiInputButton1;
@@ -410,6 +462,13 @@
         private System.Windows.Forms.Button uiInputButton2;
         private System.Windows.Forms.Button uiExitButton;
         private System.Windows.Forms.Button uiInformationButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label uiDisplayDepositCount;
+        public System.Windows.Forms.Button uiDisplayUserInformation;
+        public System.Windows.Forms.Label uiDisplayInput;
     }
 }
 

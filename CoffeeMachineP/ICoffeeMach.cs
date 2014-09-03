@@ -8,7 +8,7 @@ namespace Machine
 {
    public interface ICoffeeMach
     {
-        void CheckInputData();
+       void CheckInputData(object sender, EventArgs e);
         void InitState();
         void Update();
     }

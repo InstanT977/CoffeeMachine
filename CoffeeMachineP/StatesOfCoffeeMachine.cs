@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace CoffeeMachine
 {
-    public class StatesOfCoffeeMachine
+    public enum StatesOfCoffeeMachine
     {
+           SDrinkRequest,
+           SPriceRequest,
+           SDone,
+           SMoneyRequest,
+           SEmptyReservoir,
+           SUnlock,
+           SLock,
+           SWaterHeating
     }
 }

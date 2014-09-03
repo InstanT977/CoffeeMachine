@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Timers;
 using CashMachine;
 using CoffeeMachine;
 using MixMachine;
@@ -8,29 +9,29 @@ namespace Machine
 {
    public class CoffeeMachine:ICoffeeMach
     {
-       public IAcceptor _acceptor;
-       public String _password;
+       public IAcceptor Acceptor;
+       private const string Password = "771066582";
        public int _account;
-       public StatesOfCoffeeMachine _state;
+       public StatesOfCoffeeMachine State;
         public CashKeeper _coinKeeper;
-        public IMixMachine _mixMachine;
+        private IMixMachine _mixMachine;
         public String _input;
 
-       public enum States
+       public CoffeeMachine()
        {
-           SDrinkRequest,
-           SPriceRequest,
-           SDone,
-           SMoneyRequest,
-           SEmptyReservoir,
-           SUnlock,
-           SLock,
-           SWaterHeating
-       };
 
-       public void CheckInputData()
+         
+           Acceptor = new Acceptor();
+           _mixMachine = new MixAndPourMachine();
+           State = StatesOfCoffeeMachine.SDrinkRequest;
+       }
+
+
+
+
+       public void CheckInputData(object sender, EventArgs e)
         {
-            
+            var input = sender.ToString();
         }
         public void InitState()
         {
