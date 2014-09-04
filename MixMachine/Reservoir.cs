@@ -1,32 +1,76 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CoffeeMachine;
 
-namespace CoffeeMachine
+namespace MixMachine
 {
-    public class Reservoir
+    public class Reservoirs
     {
-        public Component _drink;
-        public int _drinkCount;
-        public int _drinkPrice;
-
-        public Component GetDrink()
+        private readonly List<Drink> _drinks;
+        private Drink _currentDrink;
+        private const int DefaultDrinkCount = 200;
+        public Reservoirs()
         {
-            return null;
+            InitializeDrinks();
+            _drinks = new List<Drink>();
+            _currentDrink = _drinks[0];
+        }
+
+        private void InitializeDrinks()
+        {
+            
+            _drinks.Add(new Drink
+            {
+                Component = Components.Chocolate,
+                DrinkCount = DefaultDrinkCount      
+            });
+            _drinks.Add(new Drink
+            {
+                Component = Components.Cinnamon,
+                DrinkCount = DefaultDrinkCount
+            });
+            _drinks.Add(new Drink
+            {
+                Component = Components.Coffee,
+                DrinkCount = DefaultDrinkCount
+            });
+
+            _drinks.Add(new Drink
+            {
+                Component = Components.Milk,
+                DrinkCount = DefaultDrinkCount
+            });
+            _drinks.Add(new Drink
+            {
+                Component = Components.Sugar,
+                DrinkCount = DefaultDrinkCount
+            });
+        }
+
+        public Drink GetDrink(int count)
+        {
+            _currentDrink.DrinkCount -= count;
+            var tempDrink = new Drink()
+            {
+                Component = _currentDrink.Component,
+                DrinkCount = count
+            };
+            return tempDrink;
         }
         public void AddDrink()
         {
-
+            _currentDrink.DrinkCount = DefaultDrinkCount;
         }
-        public void ChangeDrink()
+        public void ChangeDrink(Components component)
         {
-
+            _currentDrink = _drinks.First(x => x.Component == component);
         }
-        public void SetPrice()
-        {
 
-        }
+    }
+
+    public class Drink
+    {
+        public Components Component;
+        public int DrinkCount;
     }
 }

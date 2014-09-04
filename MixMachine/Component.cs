@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace CoffeeMachine
 {
-    public class Component
+    public enum Components
     {
-        public String Name;
+        Coffee,
+        Milk,
+        Sugar,
+        Chocolate,
+        Cinnamon
     }
 }

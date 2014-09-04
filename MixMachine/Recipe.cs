@@ -8,7 +8,27 @@ namespace CoffeeMachine
 {
     public class Recipe
     {
-        public String _name;
-        public List<Ingridient> _ingridients;
+        public string Description;
+        public DrinkNames Name;
+        public List<Ingridient> Ingridients;
+        public int Price;
+
+
+        public void ChangePrice(int newPrice)
+        {
+            Price = newPrice;
+        }
+    }
+
+    public enum DrinkNames
+    {
+        BlackCoffee,
+        Cappuccino,
+        StrongCoffee,
+        CoffeeWithCinnamon,
+        CoffeeWithMilk, 
+        TurkishCoffee,
+        CoffeeWithoutSugar,
+        VanillaCoffee
     }
 }

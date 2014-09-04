@@ -8,7 +8,7 @@ namespace CoffeeMachine
 {
    public class Ingridient
     {
-        public Component Drink;
+        public Components Drink;
         public int Count;
     }
 }
