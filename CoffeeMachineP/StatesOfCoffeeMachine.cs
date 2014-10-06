@@ -15,6 +15,8 @@ namespace CoffeeMachine
            SEmptyReservoir,
            SUnlock,
            SLock,
-           SWaterHeating
+           SAdmin,
+           SWaterHeating,
+           SIncorrectInput
     }
 }

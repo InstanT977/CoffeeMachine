@@ -45,10 +45,6 @@ namespace CoffeeMachine
                 _inputPanel.ReceiveKey(code);
             }
         }
-        private void uiInputButton_T2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void uiInformationButton_Click(object sender, EventArgs e)
         {
@@ -60,5 +56,15 @@ namespace CoffeeMachine
             Application.Exit();
         }
 
+        private void uiPickMoney_Click(object sender, EventArgs e)
+        {
+            uiMoneyPanel.Visible = !uiMoneyPanel.Visible;
+        }
+
+        private void UiMoneyInsertClick(object sender, EventArgs e)
+        {
+            var money = ((Button) sender).Tag.ToString();
+            _coffeeMachine.
+        }
     }
 }

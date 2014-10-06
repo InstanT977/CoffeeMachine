@@ -10,24 +10,12 @@ namespace CoffeeMachine
     {
         public int _result;
         public int _value;
-        public int _time;
         public Banknote _banknote;
 
-        public void Start()
+        public bool Check(Banknote money)
         {
-            
+            return true;
         }
-        public void Finish()
-        {
-            
-        }
-        public void Check()
-        {
-            
-        }
-        public void Upate()
-        {
-            
-        }
+
     }
 }
