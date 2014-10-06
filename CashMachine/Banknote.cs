@@ -9,5 +9,10 @@ namespace CoffeeMachine
     public class Banknote
     {
         public int _value;
+
+        public Banknote(string val)
+        {
+            _value = Int32.Parse(val);
+        }
     }
 }

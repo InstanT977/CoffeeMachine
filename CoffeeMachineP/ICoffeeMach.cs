@@ -9,7 +9,8 @@ namespace Machine
    public interface ICoffeeMach
     {
        void CheckInputData(object sender, EventArgs e);
-        void InitState();
+        string InitState();
+        bool CheckMoney(string money);
         void Update();
     }
 }

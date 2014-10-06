@@ -8,8 +8,7 @@ namespace CashMachine
 {
     public interface IAcceptor
     {
-        void Update();
-        void GetMoney();
+        void GetMoney(string money);
         int ReturnMoney();
         bool IsBusy();
         bool Failed();

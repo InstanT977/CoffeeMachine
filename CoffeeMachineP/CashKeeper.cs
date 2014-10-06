@@ -12,11 +12,11 @@ namespace CoffeeMachine
         public int _account;
         public void Open()
         {
-            
+            _closed = false;
         }
-        public void GetMoney()
+        public void GetMoney(int money)
         {
-            
+            _account += money;
         }
         public bool IsClosed()
         {
@@ -28,7 +28,7 @@ namespace CoffeeMachine
         }
         public void Close()
         {
-            
+            _closed = true;
         }
 
     }

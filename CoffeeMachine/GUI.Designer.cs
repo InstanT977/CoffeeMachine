@@ -32,6 +32,26 @@ namespace CoffeeMachine
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
             this.uiDisplayDepositCount = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.uiDisplayInput = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.uiDisplayUserInformation = new System.Windows.Forms.Button();
+            this.uiMoneyPanel = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.uiMoney5000Button = new System.Windows.Forms.Button();
+            this.uiMoney1000Button = new System.Windows.Forms.Button();
+            this.uiMoney500Button = new System.Windows.Forms.Button();
+            this.uiMoney100Button = new System.Windows.Forms.Button();
+            this.uiMoney50Button = new System.Windows.Forms.Button();
+            this.uiMoney10Button = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.uiInputPanel = new System.Windows.Forms.Panel();
             this.uiInputButton_T2 = new System.Windows.Forms.Button();
             this.uiInputButton0 = new System.Windows.Forms.Button();
@@ -47,22 +67,18 @@ namespace CoffeeMachine
             this.uiExitButton = new System.Windows.Forms.Button();
             this.uiInformationButton = new System.Windows.Forms.Button();
             this.uiInputButton1 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureCup = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.uiMainPanelPicture = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.uiDisplayUserInformation = new System.Windows.Forms.Button();
-            this.uiDisplayInput = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.uiInputPanel.SuspendLayout();
+            this.uiPickMoney = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            this.uiMoneyPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.uiInputPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiMainPanelPicture)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uiPickMoney)).BeginInit();
             this.SuspendLayout();
             // 
             // uiDisplayDepositCount
@@ -75,6 +91,243 @@ namespace CoffeeMachine
             this.uiDisplayDepositCount.Size = new System.Drawing.Size(13, 13);
             this.uiDisplayDepositCount.TabIndex = 15;
             this.uiDisplayDepositCount.Text = "0";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.uiDisplayInput);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.uiDisplayDepositCount);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.uiDisplayUserInformation);
+            this.panel1.Location = new System.Drawing.Point(335, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(194, 178);
+            this.panel1.TabIndex = 25;
+            // 
+            // uiDisplayInput
+            // 
+            this.uiDisplayInput.AutoSize = true;
+            this.uiDisplayInput.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.uiDisplayInput.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiDisplayInput.ForeColor = System.Drawing.Color.Red;
+            this.uiDisplayInput.Location = new System.Drawing.Point(38, 102);
+            this.uiDisplayInput.Name = "uiDisplayInput";
+            this.uiDisplayInput.Size = new System.Drawing.Size(0, 19);
+            this.uiDisplayInput.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(24, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Внесено:";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button2.FlatAppearance.BorderSize = 3;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(16, 94);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(161, 37);
+            this.button2.TabIndex = 16;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(16, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 37);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // uiDisplayUserInformation
+            // 
+            this.uiDisplayUserInformation.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.uiDisplayUserInformation.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.uiDisplayUserInformation.FlatAppearance.BorderSize = 3;
+            this.uiDisplayUserInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiDisplayUserInformation.Location = new System.Drawing.Point(16, 61);
+            this.uiDisplayUserInformation.Name = "uiDisplayUserInformation";
+            this.uiDisplayUserInformation.Size = new System.Drawing.Size(161, 37);
+            this.uiDisplayUserInformation.TabIndex = 16;
+            this.uiDisplayUserInformation.UseVisualStyleBackColor = false;
+            // 
+            // uiMoneyPanel
+            // 
+            this.uiMoneyPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.uiMoneyPanel.Controls.Add(this.label7);
+            this.uiMoneyPanel.Controls.Add(this.label6);
+            this.uiMoneyPanel.Controls.Add(this.label5);
+            this.uiMoneyPanel.Controls.Add(this.label4);
+            this.uiMoneyPanel.Controls.Add(this.label3);
+            this.uiMoneyPanel.Controls.Add(this.label2);
+            this.uiMoneyPanel.Controls.Add(this.uiMoney5000Button);
+            this.uiMoneyPanel.Controls.Add(this.uiMoney1000Button);
+            this.uiMoneyPanel.Controls.Add(this.uiMoney500Button);
+            this.uiMoneyPanel.Controls.Add(this.uiMoney100Button);
+            this.uiMoneyPanel.Controls.Add(this.uiMoney50Button);
+            this.uiMoneyPanel.Controls.Add(this.uiMoney10Button);
+            this.uiMoneyPanel.Location = new System.Drawing.Point(335, 471);
+            this.uiMoneyPanel.Name = "uiMoneyPanel";
+            this.uiMoneyPanel.Size = new System.Drawing.Size(206, 114);
+            this.uiMoneyPanel.TabIndex = 26;
+            this.uiMoneyPanel.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(150, 40);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "100";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(93, 40);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(19, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "50";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(26, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "10";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "500";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(86, 92);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "1000";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(149, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "5000";
+            // 
+            // uiMoney5000Button
+            // 
+            this.uiMoney5000Button.BackgroundImage = global::CoffeeMachine.Properties.Resources._5000_r;
+            this.uiMoney5000Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.uiMoney5000Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.uiMoney5000Button.Location = new System.Drawing.Point(139, 65);
+            this.uiMoney5000Button.Name = "uiMoney5000Button";
+            this.uiMoney5000Button.Size = new System.Drawing.Size(50, 23);
+            this.uiMoney5000Button.TabIndex = 0;
+            this.uiMoney5000Button.Tag = "5000";
+            this.uiMoney5000Button.UseVisualStyleBackColor = true;
+            this.uiMoney5000Button.Click += new System.EventHandler(this.UiMoneyInsertClick);
+            // 
+            // uiMoney1000Button
+            // 
+            this.uiMoney1000Button.BackgroundImage = global::CoffeeMachine.Properties.Resources._1000_r;
+            this.uiMoney1000Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.uiMoney1000Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.uiMoney1000Button.Location = new System.Drawing.Point(77, 65);
+            this.uiMoney1000Button.Name = "uiMoney1000Button";
+            this.uiMoney1000Button.Size = new System.Drawing.Size(50, 23);
+            this.uiMoney1000Button.TabIndex = 0;
+            this.uiMoney1000Button.Tag = "1000";
+            this.uiMoney1000Button.UseVisualStyleBackColor = true;
+            this.uiMoney1000Button.Click += new System.EventHandler(this.UiMoneyInsertClick);
+            // 
+            // uiMoney500Button
+            // 
+            this.uiMoney500Button.BackgroundImage = global::CoffeeMachine.Properties.Resources._500_r;
+            this.uiMoney500Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.uiMoney500Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.uiMoney500Button.Location = new System.Drawing.Point(12, 65);
+            this.uiMoney500Button.Name = "uiMoney500Button";
+            this.uiMoney500Button.Size = new System.Drawing.Size(50, 23);
+            this.uiMoney500Button.TabIndex = 0;
+            this.uiMoney500Button.Tag = "500";
+            this.uiMoney500Button.UseVisualStyleBackColor = true;
+            this.uiMoney500Button.Click += new System.EventHandler(this.UiMoneyInsertClick);
+            // 
+            // uiMoney100Button
+            // 
+            this.uiMoney100Button.BackgroundImage = global::CoffeeMachine.Properties.Resources._100_r;
+            this.uiMoney100Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.uiMoney100Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.uiMoney100Button.Location = new System.Drawing.Point(139, 14);
+            this.uiMoney100Button.Name = "uiMoney100Button";
+            this.uiMoney100Button.Size = new System.Drawing.Size(50, 23);
+            this.uiMoney100Button.TabIndex = 0;
+            this.uiMoney100Button.Tag = "100";
+            this.uiMoney100Button.UseVisualStyleBackColor = true;
+            this.uiMoney100Button.Click += new System.EventHandler(this.UiMoneyInsertClick);
+            // 
+            // uiMoney50Button
+            // 
+            this.uiMoney50Button.BackgroundImage = global::CoffeeMachine.Properties.Resources._50_r;
+            this.uiMoney50Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.uiMoney50Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.uiMoney50Button.Location = new System.Drawing.Point(77, 14);
+            this.uiMoney50Button.Name = "uiMoney50Button";
+            this.uiMoney50Button.Size = new System.Drawing.Size(50, 23);
+            this.uiMoney50Button.TabIndex = 0;
+            this.uiMoney50Button.Tag = "50";
+            this.uiMoney50Button.UseVisualStyleBackColor = true;
+            this.uiMoney50Button.Click += new System.EventHandler(this.UiMoneyInsertClick);
+            // 
+            // uiMoney10Button
+            // 
+            this.uiMoney10Button.BackgroundImage = global::CoffeeMachine.Properties.Resources._10_r;
+            this.uiMoney10Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.uiMoney10Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.uiMoney10Button.Location = new System.Drawing.Point(12, 14);
+            this.uiMoney10Button.Name = "uiMoney10Button";
+            this.uiMoney10Button.Size = new System.Drawing.Size(50, 23);
+            this.uiMoney10Button.TabIndex = 0;
+            this.uiMoney10Button.Tag = "10";
+            this.uiMoney10Button.UseVisualStyleBackColor = true;
+            this.uiMoney10Button.Click += new System.EventHandler(this.UiMoneyInsertClick);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(335, 443);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(206, 142);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
             // 
             // uiInputPanel
             // 
@@ -297,17 +550,6 @@ namespace CoffeeMachine
             this.uiInputButton1.UseVisualStyleBackColor = true;
             this.uiInputButton1.Click += new System.EventHandler(this.UiInputButtonClick);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(335, 443);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(206, 142);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 23;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureCup
             // 
             this.pictureCup.Image = global::CoffeeMachine.Properties.Resources.cup;
@@ -341,78 +583,15 @@ namespace CoffeeMachine
             this.uiMainPanelPicture.TabIndex = 1;
             this.uiMainPanelPicture.TabStop = false;
             // 
-            // panel1
+            // uiPickMoney
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.uiDisplayInput);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.uiDisplayDepositCount);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.uiDisplayUserInformation);
-            this.panel1.Location = new System.Drawing.Point(335, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(194, 178);
-            this.panel1.TabIndex = 25;
-            // 
-            // uiDisplayUserInformation
-            // 
-            this.uiDisplayUserInformation.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.uiDisplayUserInformation.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.uiDisplayUserInformation.FlatAppearance.BorderSize = 3;
-            this.uiDisplayUserInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiDisplayUserInformation.Location = new System.Drawing.Point(16, 61);
-            this.uiDisplayUserInformation.Name = "uiDisplayUserInformation";
-            this.uiDisplayUserInformation.Size = new System.Drawing.Size(161, 37);
-            this.uiDisplayUserInformation.TabIndex = 16;
-            this.uiDisplayUserInformation.UseVisualStyleBackColor = false;
-            // 
-            // uiDisplayInput
-            // 
-            this.uiDisplayInput.AutoSize = true;
-            this.uiDisplayInput.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.uiDisplayInput.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiDisplayInput.ForeColor = System.Drawing.Color.Red;
-            this.uiDisplayInput.Location = new System.Drawing.Point(38, 102);
-            this.uiDisplayInput.Name = "uiDisplayInput";
-            this.uiDisplayInput.Size = new System.Drawing.Size(0, 19);
-            this.uiDisplayInput.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(24, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Внесено:";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(16, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 37);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(16, 94);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(161, 37);
-            this.button2.TabIndex = 16;
-            this.button2.UseVisualStyleBackColor = false;
+            this.uiPickMoney.Image = global::CoffeeMachine.Properties.Resources.Animation;
+            this.uiPickMoney.Location = new System.Drawing.Point(421, 458);
+            this.uiPickMoney.Name = "uiPickMoney";
+            this.uiPickMoney.Size = new System.Drawing.Size(51, 9);
+            this.uiPickMoney.TabIndex = 27;
+            this.uiPickMoney.TabStop = false;
+            this.uiPickMoney.Click += new System.EventHandler(this.uiPickMoney_Click);
             // 
             // GUI
             // 
@@ -420,6 +599,8 @@ namespace CoffeeMachine
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 585);
             this.ControlBox = false;
+            this.Controls.Add(this.uiPickMoney);
+            this.Controls.Add(this.uiMoneyPanel);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.uiInputPanel);
             this.Controls.Add(this.panel1);
@@ -430,13 +611,16 @@ namespace CoffeeMachine
             this.Name = "GUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Coffee Machine";
-            this.uiInputPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.uiMoneyPanel.ResumeLayout(false);
+            this.uiMoneyPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.uiInputPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureCup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiMainPanelPicture)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uiPickMoney)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -469,6 +653,20 @@ namespace CoffeeMachine
         public System.Windows.Forms.Label uiDisplayDepositCount;
         public System.Windows.Forms.Button uiDisplayUserInformation;
         public System.Windows.Forms.Label uiDisplayInput;
+        private System.Windows.Forms.Panel uiMoneyPanel;
+        private System.Windows.Forms.Button uiMoney10Button;
+        private System.Windows.Forms.Button uiMoney5000Button;
+        private System.Windows.Forms.Button uiMoney1000Button;
+        private System.Windows.Forms.Button uiMoney500Button;
+        private System.Windows.Forms.Button uiMoney100Button;
+        private System.Windows.Forms.Button uiMoney50Button;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox uiPickMoney;
     }
 }
 

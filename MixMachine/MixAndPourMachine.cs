@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Timers;
 using CoffeeMachine;
 
@@ -6,6 +8,7 @@ namespace MixMachine
 {
    public class MixAndPourMachine :IMixMachine
    {
+        public event EventHandler DrinkCooked;
         private WaterContainer _waterContainer;
         private Timer _timer;
         public Reservoirs Reservoirs;
@@ -48,6 +51,7 @@ namespace MixMachine
 
        private void InitializeRecepies()
        {
+           Recipes = new List<Recipe>();
            Recipes.Add(new Recipe
            {
                Description = "Черный кофе",
@@ -244,10 +248,27 @@ namespace MixMachine
            });
        }
 
-       public void MixAndPour()
-        {
-            
-        }
+       public bool MixAndPoWur()
+       {
+           throw new NotImplementedException();
+       }
+
+       public int? GetPrice(string code)
+       {
+           int intCode = Int32.Parse(code);
+           var drink = Recipes.FirstOrDefault(x => x.Name == (DrinkNames) intCode);
+
+           if (drink != null)
+           {
+               return drink.Price;
+           }
+           return null;
+       }
+
+       public bool MixAndPour(string code)
+       {
+           return false;
+       }
         public void SendDrink()
         {
             
