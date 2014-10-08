@@ -36,6 +36,8 @@ namespace MixMachine
            _timer.Start();
        }
 
+
+
        private void CheckWaterTemperature(object sender, ElapsedEventArgs e)
        {
            const int inProcessTimeToHeat = 10000;
@@ -248,10 +250,55 @@ namespace MixMachine
            });
        }
 
-       public bool MixAndPoWur()
+       public bool MixAndPoWur(string code)
        {
-           throw new NotImplementedException();
+           var exists = CheckIngridientsExists(code);
+           if(exists)
+           { 
+            int intCode = Int32.Parse(code);
+
+           var drink = Recipes.FirstOrDefault(x => x.Name == (DrinkNames) intCode);
+
+               foreach (var ingridient in drink.Ingridients)
+               {
+                   var currentComponent = ingridient.Drink;
+                   Reservoirs.ChangeDrink(currentComponent);
+                   Reservoirs.GetDrink(ingridient.Count);
+               }
+               _waterContainer.Get(CoupContainer.Volume);
+               CoupContainer.GetCoup();
+           }
+           return exists;
        }
+
+       private bool CheckIngridientsExists(string code)
+       {
+           bool result = !CoupContainer.IsEmpty
+                    && _waterContainer.CheckWaterContains(CoupContainer.Volume);
+               
+
+           int intCode = Int32.Parse(code);
+           var drink = Recipes.FirstOrDefault(x => x.Name == (DrinkNames) intCode);
+
+           if (drink != null)
+           {
+               foreach (var ingr in drink.Ingridients)
+               {
+                   Reservoirs.ChangeDrink(ingr.Drink);
+                   result = result && Reservoirs.CheckDrinkExists(ingr.Count);
+               }
+
+               
+           }
+           else
+           {
+               result = false;
+           }
+
+           return result;
+       }
+
+
 
        public int? GetPrice(string code)
        {
@@ -265,10 +312,6 @@ namespace MixMachine
            return null;
        }
 
-       public bool MixAndPour(string code)
-       {
-           return false;
-       }
         public void SendDrink()
         {
             

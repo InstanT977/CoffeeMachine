@@ -14,7 +14,7 @@ namespace MixMachine
         private const int MinTemperature = 96;
         
 
-        public double Liter = Volume;
+        public double mLiter = Volume;
 
         public double Temperature = 100;
         private readonly Timer _coolingTimer = new Timer();
@@ -25,6 +25,11 @@ namespace MixMachine
         {
             InitializeHeatingTimer();
             InitializeCoolingTimer();
+        }
+
+        public bool CheckWaterContains(double mLiters)
+        {
+            return mLiter >= mLiters;
         }
 
         public bool CheckTemperature()
@@ -45,6 +50,16 @@ namespace MixMachine
             return false;
         }
 
+        public double Get(int mLiters)
+        {
+            mLiter -= mLiters;
+            if (mLiter <= 0)
+            {
+                mLiter += mLiters;
+                return -1;
+            }
+            return mLiters;
+        }
         public void StartHeating()
         {
             IsHeating = true;

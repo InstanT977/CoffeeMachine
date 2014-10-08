@@ -8,7 +8,7 @@ namespace MixMachine
 {
     public interface IMixMachine
     {
-        bool MixAndPoWur();
+        bool MixAndPoWur(string code);
         int? GetPrice(string code);
         void SendDrink();
     }

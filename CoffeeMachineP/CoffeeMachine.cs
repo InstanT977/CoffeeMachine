@@ -42,7 +42,19 @@ namespace Machine
        public bool CheckMoney(string money)
        {
            Acceptor.GetMoney(money);
-
+           if (!Acceptor.IsBusy())
+           {
+               if (!Acceptor.Failed())
+               {
+                   _account += Int32.Parse(money);
+                   return true;
+               }
+               else
+               {
+                   Acceptor.ReturnMoney();
+                   return false;
+               }
+           }
        }
        private void CheckPrice(string input)
        {
@@ -55,7 +67,14 @@ namespace Machine
            else
            {
                State = StatesOfCoffeeMachine.SMoneyRequest;
-               if()
+               if (_account >= price)
+               {
+                   _mixMachine.MixAndPoWur();
+               }
+               else
+               {
+                   State = StatesOfCoffeeMachine.SNotEnoughMoney;
+               }
            }
 
        }

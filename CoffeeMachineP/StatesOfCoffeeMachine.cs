@@ -17,6 +17,7 @@ namespace CoffeeMachine
            SLock,
            SAdmin,
            SWaterHeating,
-           SIncorrectInput
+           SIncorrectInput,
+           SNotEnoughMoney
     }
 }

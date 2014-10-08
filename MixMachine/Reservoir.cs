@@ -49,6 +49,7 @@ namespace MixMachine
 
         public Drink GetDrink(int count)
         {
+
             _currentDrink.DrinkCount -= count;
             var tempDrink = new Drink()
             {
@@ -57,6 +58,12 @@ namespace MixMachine
             };
             return tempDrink;
         }
+
+        public bool CheckDrinkExists(int count)
+        {
+            return _currentDrink.DrinkCount>=count
+        }
+
         public void AddDrink()
         {
             _currentDrink.DrinkCount = DefaultDrinkCount;

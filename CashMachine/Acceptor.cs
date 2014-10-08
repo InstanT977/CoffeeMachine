@@ -30,12 +30,10 @@ namespace CashMachine
 
         }
 
-        public int ReturnMoney()
+        public void ReturnMoney()
         {
             _banknoteList.Clear();
-            int returned = _account;
             _account = 0;
-            return returned;
         }
         public bool IsBusy()
         {
