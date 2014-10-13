@@ -8,6 +8,11 @@ namespace Machine
 {
    public interface ICoffeeMach
     {
+        event EventHandler StateChanged;
+
+        event EventHandler AccountChanged;
+
+        event EventHandler DrinkCooked;
         void CheckInputData(object sender, EventArgs e);
         string InitState();
         bool CheckMoney(string money);

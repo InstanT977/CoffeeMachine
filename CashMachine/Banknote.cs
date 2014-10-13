@@ -12,7 +12,7 @@ namespace CoffeeMachine
 
         public Banknote(string val)
         {
-            _value = Int32.Parse(val);
+            _value = int.Parse(val);
         }
     }
 }

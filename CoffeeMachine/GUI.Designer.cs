@@ -159,6 +159,7 @@ namespace CoffeeMachine
             this.uiDisplayUserInformation.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.uiDisplayUserInformation.FlatAppearance.BorderSize = 3;
             this.uiDisplayUserInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiDisplayUserInformation.ForeColor = System.Drawing.Color.DarkRed;
             this.uiDisplayUserInformation.Location = new System.Drawing.Point(16, 61);
             this.uiDisplayUserInformation.Name = "uiDisplayUserInformation";
             this.uiDisplayUserInformation.Size = new System.Drawing.Size(161, 37);

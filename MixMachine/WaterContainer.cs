@@ -50,7 +50,7 @@ namespace MixMachine
             return false;
         }
 
-        public double Get(int mLiters)
+        public double Get(double mLiters)
         {
             mLiter -= mLiters;
             if (mLiter <= 0)

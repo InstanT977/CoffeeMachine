@@ -18,6 +18,10 @@ namespace CoffeeMachine
            SAdmin,
            SWaterHeating,
            SIncorrectInput,
-           SNotEnoughMoney
+           SNotEnoughMoney,
+           SReservoirsFilled,
+           SCashCleared,
+           SDrinkCodeRequest,
+           SDrinkNewPriceRequest
     }
 }

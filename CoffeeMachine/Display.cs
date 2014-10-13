@@ -27,8 +27,10 @@ namespace CoffeeMachine
             set
             {
                 _owner.uiDisplayUserInformation.Text = value;
+                _owner.uiDisplayUserInformation.Refresh();
             }
         }
+
         /// <summary>
         /// Вводимые символы
         /// </summary>

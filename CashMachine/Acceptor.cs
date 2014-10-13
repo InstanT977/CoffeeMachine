@@ -16,6 +16,12 @@ namespace CashMachine
          public List<Banknote> _banknoteList;
          public BanknoteChecker _banknoteChecker;
 
+        public Acceptor()
+        {
+            _banknoteChecker = new BanknoteChecker();
+            _banknoteList = new List<Banknote>();
+        }
+
         public void GetMoney(string money)
         {
             _isUsed = true;

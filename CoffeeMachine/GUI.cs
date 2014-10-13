@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Machine;
@@ -28,14 +29,36 @@ namespace CoffeeMachine
             _display = new Display(this);
             _inputPanel = new InputPanel(this);
             _coffeeMachine = new Machine.CoffeeMachine();
+
             _inputPanel.ApplyButtonClicked += _coffeeMachine.CheckInputData;
+            _coffeeMachine.StateChanged += ChangeMainDisplayState;
+            _coffeeMachine.AccountChanged += ChangeAccountState;
+            _coffeeMachine.DrinkCooked += ShowCup;
+            ChangeMainDisplayState(null,null);
+
         }
 
         private void pictureCup_Click(object sender, EventArgs e)
         {
-
+            pictureCup.Hide();
         }
 
+        private void ShowCup(object sender, EventArgs e)
+        {
+            pictureCup.Show();
+        }
+
+        private void ChangeMainDisplayState(object sender, EventArgs e)
+        {
+            _display.MainInfo = _coffeeMachine.InitState();
+            Invalidate();
+            Thread.Sleep(3000);
+        }
+
+        private void ChangeAccountState(object sender, EventArgs e)
+        {
+            _display.MoneyInfo = sender.ToString();
+        }
         private void UiInputButtonClick(object sender, EventArgs e)
         {
             var btn = sender as Button;
@@ -64,7 +87,7 @@ namespace CoffeeMachine
         private void UiMoneyInsertClick(object sender, EventArgs e)
         {
             var money = ((Button) sender).Tag.ToString();
-            _coffeeMachine.
+            var result = _coffeeMachine.CheckMoney(money);
         }
     }
 }

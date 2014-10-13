@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text.RegularExpressions;
 using System.Timers;
@@ -9,89 +10,167 @@ using MixMachine;
 namespace Machine
 {
    public class CoffeeMachine:ICoffeeMach
-    {
-       public IAcceptor Acceptor;
+   {
+       public event EventHandler StateChanged;
+       public event EventHandler AccountChanged;
+       public event EventHandler DrinkCooked;
+       public event EventHandler DrinkPriceChanged;
+       private IAcceptor Acceptor;
        private const string Password = "771066582";
-       public int _account;
+       private const string ReFillReservoirs = "771066595";
+       private const string ChangePrice = "771066599";
+       private const string WidthrowCash = "7710665118";
+       private bool _adminMode;
+       private int _account;
+       private string _drinkCode;
+       public int Account {
+           get
+           {
+               return _account;
+           }
+           set
+           {
+               _account = value;
+              AccountChanged(_account, new EventArgs());  
+           } }
+
        public StatesOfCoffeeMachine State;
-        private IMixMachine _mixMachine;
-        public String _input;
+        private readonly IMixMachine _mixMachine;
+        public String input;
 
        public CoffeeMachine()
        {
            Acceptor = new Acceptor();
            _mixMachine = new MixAndPourMachine();
-           State = StatesOfCoffeeMachine.SDrinkRequest;
+           State = StatesOfCoffeeMachine.SDone;
        }
 
 
-
+       public Dictionary<string, int> GetPriceList()
+       {
+           return _mixMachine.GetPriceList();
+       }
 
        public void CheckInputData(object sender, EventArgs e)
-        {
-            var input = sender.ToString();
-           _input = input.Replace("*", "");
-           if (_input == Password)
+       {
+           bool checkResult = true;
+            input = sender==null?"":sender.ToString();
+           switch (State)
            {
-               State = StatesOfCoffeeMachine.SAdmin;
+               case StatesOfCoffeeMachine.SDrinkCodeRequest:
+                   if (_adminMode)
+                   {
+                       
+                   }
            }
-           CheckPrice(_input);
-  
+           switch (input)
+           {
+               case Password:
+                    ChangeState(StatesOfCoffeeMachine.SAdmin);
+                    _adminMode = true;
+                    checkResult = false;
+                   break;
+               case ReFillReservoirs:
+                   if (_adminMode)
+                   {
+                       var filled = _mixMachine.FillReservoirs();
+                       if (filled)
+                       {
+                           ChangeState(StatesOfCoffeeMachine.SReservoirsFilled);
+                       }
+                   }
+                   else
+                   {
+                       ChangeState(StatesOfCoffeeMachine.SIncorrectInput);
+                   }
+                   break;
+               case ChangePrice:
+                   if (_adminMode)
+                   {
+                       ChangeState(StatesOfCoffeeMachine.SDrinkCodeRequest);
+                   }
+                   break;
+           }
+
+
+
+           if (!_adminMode && InputCodeIsCorrect(input))
+           {
+               CheckPriceAndStartPowur(input);
+           }
         }
+
+       private bool InputCodeIsCorrect(string code)
+       {
+           if (input == String.Empty || input.Contains("*"))
+           {
+               ChangeState(StatesOfCoffeeMachine.SIncorrectInput);
+               return false;
+           }
+           return true;
+       }
 
        public bool CheckMoney(string money)
        {
            Acceptor.GetMoney(money);
-           if (!Acceptor.IsBusy())
+           do
            {
-               if (!Acceptor.Failed())
+               if (!Acceptor.IsBusy())
                {
-                   _account += Int32.Parse(money);
-                   return true;
+                   if (!Acceptor.Failed())
+                   {
+                       Account += Int32.Parse(money);
+                       return true;
+                   }
+                   else
+                   {
+                       Acceptor.ReturnMoney();
+                       return false;
+                   }
                }
-               else
-               {
-                   Acceptor.ReturnMoney();
-                   return false;
-               }
-           }
+           } while (Acceptor.IsBusy());
+           return true;
        }
-       private void CheckPrice(string input)
+       private void CheckPriceAndStartPowur(string input)
        {
-           State = StatesOfCoffeeMachine.SPriceRequest;
+           ChangeState(StatesOfCoffeeMachine.SPriceRequest);
            var price = _mixMachine.GetPrice(input);
            if (price == null)
            {
-               State = StatesOfCoffeeMachine.SIncorrectInput;
+               ChangeState(StatesOfCoffeeMachine.SIncorrectInput);
            }
            else
            {
-               State = StatesOfCoffeeMachine.SMoneyRequest;
-               if (_account >= price)
+               ChangeState(StatesOfCoffeeMachine.SMoneyRequest);
+               if (Account >= price)
                {
-                   _mixMachine.MixAndPoWur();
+                   var powurResult = _mixMachine.MixAndPoWur(input);
+                   if (powurResult)
+                   {
+                       Account -= (int)price;
+                       _mixMachine.SendDrink();
+                       DrinkCooked(null,new EventArgs());
+                       ChangeState(StatesOfCoffeeMachine.SDone);
+                   }
+                   else
+                   {
+                       ChangeState(StatesOfCoffeeMachine.SEmptyReservoir);
+                   }
                }
                else
                {
-                   State = StatesOfCoffeeMachine.SNotEnoughMoney;
+                   ChangeState(StatesOfCoffeeMachine.SNotEnoughMoney);
                }
            }
 
        }
 
-       private void CheckString(string input)
+       private void ChangeState(StatesOfCoffeeMachine newState)
        {
-            string pattern = @"не";
-            string text = "Не может быть совсем не может быть"; 
-            RegexOptions option=RegexOptions.IgnoreCase; 
-            Regex newReg = new Regex(pattern,option);  
-            MatchCollection matches = newReg.Matches(text);
-            foreach(Match mat in matches)
-            {
-                    Console.WriteLine("Значение найденного обьекта {0}",mat.Value);
-            }
-
+           State = newState;
+           StateChanged(null, new EventArgs());
        }
+
         public string InitState()
         {
             switch (State)
@@ -99,7 +178,7 @@ namespace Machine
                 case StatesOfCoffeeMachine.SAdmin:
                     return "Вы авторизрованы как администратор!";
                 case StatesOfCoffeeMachine.SDone:
-                    return "Успешно выполнено!";
+                    return "Готов к работе!";
                 case StatesOfCoffeeMachine.SDrinkRequest:
                     return "Запрос напитка...";
                 case StatesOfCoffeeMachine.SEmptyReservoir:
@@ -111,9 +190,21 @@ namespace Machine
                 case StatesOfCoffeeMachine.SPriceRequest:
                     return "Запрос цены напитка";
                 case StatesOfCoffeeMachine.SUnlock:
-                    return "Готов к работе!";
+                    return "Разблокирование...";
                 case StatesOfCoffeeMachine.SWaterHeating:
                     return "Нагрев воды...";
+                case StatesOfCoffeeMachine.SIncorrectInput:
+                    return "Некорректный ввод!";
+                case StatesOfCoffeeMachine.SNotEnoughMoney:
+                    return "Недостаточно средств!";
+                case StatesOfCoffeeMachine.SReservoirsFilled:
+                    return "Резервуары пополнены.";
+                case StatesOfCoffeeMachine.SCashCleared:
+                    return "Получены все средства из депозита";
+                case StatesOfCoffeeMachine.SDrinkCodeRequest:
+                    return "Введите код напитка";
+                case StatesOfCoffeeMachine.SDrinkNewPriceRequest:
+                    return "Введите новую цену напитка";
                 default:
                     return "";
             }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CoffeeMachine
@@ -13,7 +14,7 @@ namespace CoffeeMachine
         public String _input;
         public List<InputButton> _buttonList;
         public event EventHandler ApplyButtonClicked;
-
+        public event EventHandler ClearButtonClicked;
         //private static void OnKeyButtonClicked()
         //{
         //    EventHandler handler = KeyButtonClicked;
@@ -46,6 +47,11 @@ namespace CoffeeMachine
                 if (pressedKey == "*")
                 {
                     ApplyButtonClicked(_input,new EventArgs());
+                }
+                if (pressedKey == "#")
+                {
+                    ClearButtonClicked(null, new EventArgs());
+                    Thread.Sleep(1000);
                 }
                 _input += pressedKey;
                 _owner._display.InputInfo = _input;
