@@ -31,11 +31,18 @@ namespace CoffeeMachine
             _coffeeMachine = new Machine.CoffeeMachine();
 
             _inputPanel.ApplyButtonClicked += _coffeeMachine.CheckInputData;
+            _inputPanel.ClearButtonClicked += Cancel;
+            _inputPanel.ClearButtonClicked += _coffeeMachine.Cancel;
             _coffeeMachine.StateChanged += ChangeMainDisplayState;
             _coffeeMachine.AccountChanged += ChangeAccountState;
             _coffeeMachine.DrinkCooked += ShowCup;
             ChangeMainDisplayState(null,null);
 
+        }
+
+        private void Cancel(object sender, EventArgs e)
+        {
+            _display.InputInfo = String.Empty;
         }
 
         private void pictureCup_Click(object sender, EventArgs e)
@@ -50,9 +57,9 @@ namespace CoffeeMachine
 
         private void ChangeMainDisplayState(object sender, EventArgs e)
         {
-            _display.MainInfo = _coffeeMachine.InitState();
+            Thread.Sleep(500);
+            _display.MainInfo = _coffeeMachine.GetState();
             Invalidate();
-            Thread.Sleep(3000);
         }
 
         private void ChangeAccountState(object sender, EventArgs e)

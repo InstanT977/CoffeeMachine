@@ -43,6 +43,7 @@ namespace CoffeeMachine
             set
             {
                 _owner.uiDisplayInput.Text = value;
+                _owner.uiDisplayInput.Refresh();
             }
         }
         /// <summary>

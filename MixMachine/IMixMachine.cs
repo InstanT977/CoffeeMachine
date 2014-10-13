@@ -15,7 +15,7 @@ namespace MixMachine
 
         int? GetPrice(string code);
 
-        bool SetPrice(string code);
+        bool SetPrice(string code, int newPrice);
 
         void SendDrink();
 

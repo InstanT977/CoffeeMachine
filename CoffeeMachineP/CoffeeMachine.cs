@@ -15,14 +15,13 @@ namespace Machine
        public event EventHandler AccountChanged;
        public event EventHandler DrinkCooked;
        public event EventHandler DrinkPriceChanged;
-       private IAcceptor Acceptor;
+       private readonly IAcceptor Acceptor;
        private const string Password = "771066582";
        private const string ReFillReservoirs = "771066595";
        private const string ChangePrice = "771066599";
        private const string WidthrowCash = "7710665118";
        private bool _adminMode;
        private int _account;
-       private string _drinkCode;
        public int Account {
            get
            {
@@ -36,7 +35,7 @@ namespace Machine
 
        public StatesOfCoffeeMachine State;
         private readonly IMixMachine _mixMachine;
-        public String input;
+        public String Input;
 
        public CoffeeMachine()
        {
@@ -51,24 +50,32 @@ namespace Machine
            return _mixMachine.GetPriceList();
        }
 
+       public void Cancel(object sender, EventArgs e)
+       {
+           ChangeState(StatesOfCoffeeMachine.SDone);
+           _adminMode = false;
+           Input = String.Empty;
+       }
+
        public void CheckInputData(object sender, EventArgs e)
        {
-           bool checkResult = true;
-            input = sender==null?"":sender.ToString();
-           switch (State)
+           var tempInput = sender == null ? "" : sender.ToString();
+
+           if (!InputCodeIsCorrect(tempInput))
            {
-               case StatesOfCoffeeMachine.SDrinkCodeRequest:
-                   if (_adminMode)
-                   {
-                       
-                   }
+               return;
            }
-           switch (input)
+           CheckState();
+           CheckInput(tempInput);
+        }
+
+       private void CheckInput(string tempInput)
+       {
+           switch (tempInput)
            {
                case Password:
-                    ChangeState(StatesOfCoffeeMachine.SAdmin);
-                    _adminMode = true;
-                    checkResult = false;
+                   ChangeState(StatesOfCoffeeMachine.SAdmin);
+                   _adminMode = true;
                    break;
                case ReFillReservoirs:
                    if (_adminMode)
@@ -91,18 +98,28 @@ namespace Machine
                    }
                    break;
            }
+       }
 
-
-
-           if (!_adminMode && InputCodeIsCorrect(input))
+       private void CheckState()
+       {
+           switch (State)
            {
-               CheckPriceAndStartPowur(input);
+               case StatesOfCoffeeMachine.SDrinkCodeRequest:
+                   if (_adminMode)
+                   {
+                       ChangeState(StatesOfCoffeeMachine.SPriceRequest);
+                   }
+                   else
+                   {
+                       CheckPriceAndStartPowur(Input);
+                   }
+                   break;
            }
-        }
+       }
 
        private bool InputCodeIsCorrect(string code)
        {
-           if (input == String.Empty || input.Contains("*"))
+           if (string.IsNullOrEmpty(code) || code.Contains("*"))
            {
                ChangeState(StatesOfCoffeeMachine.SIncorrectInput);
                return false;
@@ -171,7 +188,7 @@ namespace Machine
            StateChanged(null, new EventArgs());
        }
 
-        public string InitState()
+        public string GetState()
         {
             switch (State)
             {

@@ -14,8 +14,8 @@ namespace Machine
 
         event EventHandler DrinkCooked;
         void CheckInputData(object sender, EventArgs e);
-        string InitState();
+        string GetState();
         bool CheckMoney(string money);
-        void Update();
+        void Cancel(object sender, EventArgs e);
     }
 }
