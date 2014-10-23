@@ -34,6 +34,8 @@ namespace CoffeeMachine
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
             this.uiDisplayDepositCount = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.uiWaterHeatingControl = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uiDisplayInput = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -55,8 +57,6 @@ namespace CoffeeMachine
             this.uiCashButton = new System.Windows.Forms.Button();
             this.uiPickMoney = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.uiWaterHeatingControl = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureCup = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.uiMainPanelPicture = new System.Windows.Forms.PictureBox();
@@ -78,11 +78,11 @@ namespace CoffeeMachine
             this.uiInformationButton = new System.Windows.Forms.Button();
             this.uiInputButton1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uiWaterHeatingControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.uiMoneyPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiPickMoney)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiWaterHeatingControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiMainPanelPicture)).BeginInit();
@@ -113,10 +113,31 @@ namespace CoffeeMachine
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.uiDisplayUserInformation);
+            this.panel1.Controls.Add(this.uiExitButton);
             this.panel1.Location = new System.Drawing.Point(335, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(194, 178);
             this.panel1.TabIndex = 25;
+            // 
+            // uiWaterHeatingControl
+            // 
+            this.uiWaterHeatingControl.BackgroundImage = global::CoffeeMachine.Properties.Resources.green;
+            this.uiWaterHeatingControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.uiWaterHeatingControl.Location = new System.Drawing.Point(165, 149);
+            this.uiWaterHeatingControl.Name = "uiWaterHeatingControl";
+            this.uiWaterHeatingControl.Size = new System.Drawing.Size(13, 13);
+            this.uiWaterHeatingControl.TabIndex = 17;
+            this.uiWaterHeatingControl.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::CoffeeMachine.Properties.Resources.water;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(134, 137);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 33);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
             // 
             // uiDisplayInput
             // 
@@ -363,29 +384,8 @@ namespace CoffeeMachine
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
             // 
-            // uiWaterHeatingControl
-            // 
-            this.uiWaterHeatingControl.BackgroundImage = global::CoffeeMachine.Properties.Resources.green;
-            this.uiWaterHeatingControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.uiWaterHeatingControl.Location = new System.Drawing.Point(165, 149);
-            this.uiWaterHeatingControl.Name = "uiWaterHeatingControl";
-            this.uiWaterHeatingControl.Size = new System.Drawing.Size(13, 13);
-            this.uiWaterHeatingControl.TabIndex = 17;
-            this.uiWaterHeatingControl.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::CoffeeMachine.Properties.Resources.water;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(134, 137);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 33);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureCup
             // 
-            this.pictureCup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureCup.Image = global::CoffeeMachine.Properties.Resources.cup;
             this.pictureCup.Location = new System.Drawing.Point(157, 306);
             this.pictureCup.Name = "pictureCup";
@@ -452,7 +452,6 @@ namespace CoffeeMachine
             this.uiInputPanel.Controls.Add(this.uiInputButton3);
             this.uiInputPanel.Controls.Add(this.uiInputButton4);
             this.uiInputPanel.Controls.Add(this.uiInputButton2);
-            this.uiInputPanel.Controls.Add(this.uiExitButton);
             this.uiInputPanel.Controls.Add(this.uiInformationButton);
             this.uiInputPanel.Controls.Add(this.uiInputButton1);
             this.uiInputPanel.Location = new System.Drawing.Point(335, 172);
@@ -462,7 +461,6 @@ namespace CoffeeMachine
             // 
             // uiInputButton_T2
             // 
-            this.uiInputButton_T2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiInputButton_T2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiInputButton_T2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiInputButton_T2.Location = new System.Drawing.Point(136, 153);
@@ -476,7 +474,6 @@ namespace CoffeeMachine
             // 
             // uiInputButton0
             // 
-            this.uiInputButton0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiInputButton0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiInputButton0.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiInputButton0.Location = new System.Drawing.Point(84, 153);
@@ -490,7 +487,6 @@ namespace CoffeeMachine
             // 
             // uiInputButton_T1
             // 
-            this.uiInputButton_T1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiInputButton_T1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiInputButton_T1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiInputButton_T1.Location = new System.Drawing.Point(32, 152);
@@ -504,7 +500,6 @@ namespace CoffeeMachine
             // 
             // uiInputButton9
             // 
-            this.uiInputButton9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiInputButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiInputButton9.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiInputButton9.Location = new System.Drawing.Point(136, 108);
@@ -518,7 +513,6 @@ namespace CoffeeMachine
             // 
             // uiInputButton8
             // 
-            this.uiInputButton8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiInputButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiInputButton8.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiInputButton8.Location = new System.Drawing.Point(84, 108);
@@ -532,7 +526,6 @@ namespace CoffeeMachine
             // 
             // uiInputButton7
             // 
-            this.uiInputButton7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiInputButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiInputButton7.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiInputButton7.Location = new System.Drawing.Point(32, 108);
@@ -546,7 +539,6 @@ namespace CoffeeMachine
             // 
             // uiInputButton6
             // 
-            this.uiInputButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiInputButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiInputButton6.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiInputButton6.Location = new System.Drawing.Point(136, 63);
@@ -560,7 +552,6 @@ namespace CoffeeMachine
             // 
             // uiInputButton5
             // 
-            this.uiInputButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiInputButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiInputButton5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiInputButton5.Location = new System.Drawing.Point(84, 63);
@@ -574,7 +565,6 @@ namespace CoffeeMachine
             // 
             // uiInputButton3
             // 
-            this.uiInputButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiInputButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiInputButton3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiInputButton3.Location = new System.Drawing.Point(136, 18);
@@ -588,7 +578,6 @@ namespace CoffeeMachine
             // 
             // uiInputButton4
             // 
-            this.uiInputButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiInputButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiInputButton4.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiInputButton4.Location = new System.Drawing.Point(32, 63);
@@ -602,7 +591,6 @@ namespace CoffeeMachine
             // 
             // uiInputButton2
             // 
-            this.uiInputButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiInputButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiInputButton2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiInputButton2.Location = new System.Drawing.Point(84, 18);
@@ -619,13 +607,12 @@ namespace CoffeeMachine
             this.uiExitButton.BackColor = System.Drawing.Color.Transparent;
             this.uiExitButton.BackgroundImage = global::CoffeeMachine.Properties.Resources.exit;
             this.uiExitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.uiExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiExitButton.FlatAppearance.BorderSize = 0;
             this.uiExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiExitButton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.uiExitButton.Location = new System.Drawing.Point(84, 222);
+            this.uiExitButton.Location = new System.Drawing.Point(164, 0);
             this.uiExitButton.Name = "uiExitButton";
-            this.uiExitButton.Size = new System.Drawing.Size(46, 37);
+            this.uiExitButton.Size = new System.Drawing.Size(24, 22);
             this.uiExitButton.TabIndex = 0;
             this.uiExitButton.Tag = "13";
             this.uiExitButton.UseVisualStyleBackColor = false;
@@ -633,7 +620,6 @@ namespace CoffeeMachine
             // 
             // uiInformationButton
             // 
-            this.uiInformationButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiInformationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiInformationButton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.uiInformationButton.Location = new System.Drawing.Point(32, 194);
@@ -647,7 +633,6 @@ namespace CoffeeMachine
             // 
             // uiInputButton1
             // 
-            this.uiInputButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiInputButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiInputButton1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiInputButton1.Location = new System.Drawing.Point(32, 18);
@@ -681,12 +666,12 @@ namespace CoffeeMachine
             this.Text = "Coffee Machine";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uiWaterHeatingControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.uiMoneyPanel.ResumeLayout(false);
             this.uiMoneyPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiPickMoney)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiWaterHeatingControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureCup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiMainPanelPicture)).EndInit();
