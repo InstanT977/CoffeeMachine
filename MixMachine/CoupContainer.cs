@@ -11,6 +11,8 @@ namespace CoffeeMachine
         private const int DefaultCoupCount = 50;
         private int _count;
         public bool IsEmpty;
+        public const double Volume = 30;
+
 
         public void GetCoup()
         {

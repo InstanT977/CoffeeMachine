@@ -11,8 +11,8 @@ namespace MixMachine
         private const int DefaultDrinkCount = 200;
         public Reservoirs()
         {
-            InitializeDrinks();
             _drinks = new List<Drink>();
+            InitializeDrinks();
             _currentDrink = _drinks[0];
         }
 
@@ -49,6 +49,7 @@ namespace MixMachine
 
         public Drink GetDrink(int count)
         {
+
             _currentDrink.DrinkCount -= count;
             var tempDrink = new Drink()
             {
@@ -57,6 +58,12 @@ namespace MixMachine
             };
             return tempDrink;
         }
+
+        public bool CheckDrinkExists(int count)
+        {
+            return _currentDrink.DrinkCount >= count;
+        }
+
         public void AddDrink()
         {
             _currentDrink.DrinkCount = DefaultDrinkCount;

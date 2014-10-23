@@ -22,13 +22,13 @@ namespace CoffeeMachine
 
     public enum DrinkNames
     {
-        BlackCoffee,
-        Cappuccino,
-        StrongCoffee,
-        CoffeeWithCinnamon,
-        CoffeeWithMilk, 
-        TurkishCoffee,
-        CoffeeWithoutSugar,
-        VanillaCoffee
+        BlackCoffee = 0,
+        Cappuccino = 1,
+        StrongCoffee = 2,
+        CoffeeWithCinnamon = 3,
+        CoffeeWithMilk = 4, 
+        TurkishCoffee = 5,
+        CoffeeWithoutSugar = 6,
+        VanillaCoffee = 7
     }
 }

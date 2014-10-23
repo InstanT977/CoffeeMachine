@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Timers;
 
 namespace MixMachine
@@ -12,19 +8,25 @@ namespace MixMachine
         private const int Volume=1000;
         private const int MaxTemperature = 102;
         private const int MinTemperature = 96;
-        
+        private MixAndPourMachine _owner;
 
-        public double Liter = Volume;
+        public double mLiter = Volume;
 
         public double Temperature = 100;
         private readonly Timer _coolingTimer = new Timer();
         private readonly Timer _heatingTimer = new Timer();
 
-        public bool IsHeating;
+        public bool IsHeating { get; private set; }
+
         public WaterContainer()
         {
             InitializeHeatingTimer();
             InitializeCoolingTimer();
+        }
+
+        public bool CheckWaterContains(double mLiters)
+        {
+            return mLiter >= mLiters;
         }
 
         public bool CheckTemperature()
@@ -45,6 +47,16 @@ namespace MixMachine
             return false;
         }
 
+        public double Get(double mLiters)
+        {
+            mLiter -= mLiters;
+            if (mLiter <= 0)
+            {
+                mLiter += mLiters;
+                return -1;
+            }
+            return mLiters;
+        }
         public void StartHeating()
         {
             IsHeating = true;
@@ -74,13 +86,13 @@ namespace MixMachine
         {
             if (Temperature <= MaxTemperature)
             {
-                Temperature += 0.2;
+                Temperature += 1;
             }
         }
 
         private void CoolingWater(object sender, ElapsedEventArgs e)
         {
-            Temperature--;
+            Temperature -= 10;
         }
     }
 }

@@ -17,6 +17,14 @@ namespace CoffeeMachine
            SLock,
            SAdmin,
            SWaterHeating,
-           SIncorrectInput
+           SIncorrectInput,
+           SNotEnoughMoney,
+           SReservoirsFilled,
+           SCashCleared,
+           SDrinkCodeRequest,
+           SDrinkNewPriceRequest,
+           SReady,
+           SPriceChanged,
+           SAccountCleared,
     }
 }

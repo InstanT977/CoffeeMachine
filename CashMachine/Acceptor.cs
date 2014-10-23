@@ -16,6 +16,12 @@ namespace CashMachine
          public List<Banknote> _banknoteList;
          public BanknoteChecker _banknoteChecker;
 
+        public Acceptor()
+        {
+            _banknoteChecker = new BanknoteChecker();
+            _banknoteList = new List<Banknote>();
+        }
+
         public void GetMoney(string money)
         {
             _isUsed = true;
@@ -30,12 +36,10 @@ namespace CashMachine
 
         }
 
-        public int ReturnMoney()
+        public void ReturnMoney()
         {
             _banknoteList.Clear();
-            int returned = _account;
             _account = 0;
-            return returned;
         }
         public bool IsBusy()
         {
