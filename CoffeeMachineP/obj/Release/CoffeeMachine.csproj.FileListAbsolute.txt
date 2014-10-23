@@ -1,0 +1,9 @@
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\bin\Release\CoffeeMachineP.dll
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\bin\Release\CoffeeMachineP.pdb
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\bin\Release\CashMachine.dll
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\bin\Release\MixMachine.dll
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\bin\Release\CashMachine.pdb
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\bin\Release\MixMachine.pdb
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\obj\Release\CoffeeMachine.csprojResolveAssemblyReference.cache
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\obj\Release\CoffeeMachineP.dll
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachineP\obj\Release\CoffeeMachineP.pdb

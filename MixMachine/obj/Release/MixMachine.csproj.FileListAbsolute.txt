@@ -1,0 +1,5 @@
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\bin\Release\MixMachine.dll
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\bin\Release\MixMachine.pdb
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\obj\Release\MixMachine.dll
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\obj\Release\MixMachine.pdb
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\obj\Release\MixMachine.csprojResolveAssemblyReference.cache

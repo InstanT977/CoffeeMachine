@@ -1,0 +1,5 @@
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CashMachine\bin\Release\CashMachine.dll
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CashMachine\bin\Release\CashMachine.pdb
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CashMachine\obj\Release\CashMachine.csprojResolveAssemblyReference.cache
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CashMachine\obj\Release\CashMachine.dll
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CashMachine\obj\Release\CashMachine.pdb
