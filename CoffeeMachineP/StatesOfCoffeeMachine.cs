@@ -22,6 +22,9 @@ namespace CoffeeMachine
            SReservoirsFilled,
            SCashCleared,
            SDrinkCodeRequest,
-           SDrinkNewPriceRequest
+           SDrinkNewPriceRequest,
+           SReady,
+           SPriceChanged,
+           SAccountCleared,
     }
 }

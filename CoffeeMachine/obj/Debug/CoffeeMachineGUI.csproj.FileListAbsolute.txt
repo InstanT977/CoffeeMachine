@@ -32,3 +32,4 @@ C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Debug\
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.GUI.resources
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.Properties.Resources.resources
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachineGUI.csproj.GenerateResource.Cache
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\bin\Debug\Resources\red.png

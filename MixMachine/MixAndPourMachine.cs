@@ -10,17 +10,15 @@ namespace MixMachine
    public class MixAndPourMachine :IMixMachine
    {
         private WaterContainer _waterContainer;
-        private Timer _timer;
         public Reservoirs Reservoirs;
         public bool IsWork;
         public List<Recipe> Recipes;
-
+        public event EventHandler WaterHeating;
         public CoupContainer CoupContainer;
 
 
        public MixAndPourMachine()
        {
-           InitializeWaterHeating();
            InitializeRecepies();
            InitializeComponents();
        }
@@ -66,37 +64,18 @@ namespace MixMachine
        {
            CoupContainer = new CoupContainer();
            Reservoirs = new Reservoirs();
+           _waterContainer = new WaterContainer();
        }
-
-       private void InitializeWaterHeating()
-       {
-           const int standartTimeToHeat = 60000;
-           _timer = new Timer();
-            _waterContainer = new WaterContainer();
-
-
-           _timer.Elapsed += CheckWaterTemperature;
-           _timer.Interval = standartTimeToHeat; // 10 seconds
-           _timer.Start();
-       }
-
 
        public Dictionary<string,int> GetPriceList()
        {
            return Recipes.ToDictionary(recipe => recipe.Description, recipe => recipe.Price);
        }
 
-       private void CheckWaterTemperature(object sender, ElapsedEventArgs e)
-       {
-           const int inProcessTimeToHeat = 10000;
+       public bool CheckWaterTemperature()
+       {      
            _waterContainer.CheckTemperature();
-           if (_waterContainer.IsHeating)
-           {
-               _timer.Interval = inProcessTimeToHeat; 
-               //maybe not need;
-               _timer.Stop();
-               _timer.Start();
-           }
+           return _waterContainer.IsHeating; 
        }
 
        private void InitializeRecepies()
@@ -204,7 +183,7 @@ namespace MixMachine
            Recipes.Add(new Recipe
            {
                Description = "Крепкий кофе",
-               Name = DrinkNames.CoffeeWithCinnamon,
+               Name = DrinkNames.StrongCoffee,
                Ingridients = new List<Ingridient>
                {
                    new Ingridient
@@ -253,7 +232,7 @@ namespace MixMachine
            Recipes.Add(new Recipe
            {
                Description = "Кофе без сахара",
-               Name = DrinkNames.TurkishCoffee,
+               Name = DrinkNames.CoffeeWithoutSugar,
                Ingridients = new List<Ingridient>
                {
                    new Ingridient

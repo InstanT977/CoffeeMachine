@@ -13,9 +13,14 @@ namespace Machine
         event EventHandler AccountChanged;
 
         event EventHandler DrinkCooked;
+
+        event EventHandler PriceChanged;
+
+        event EventHandler WaterHeatingStateChanged;
         void CheckInputData(object sender, EventArgs e);
         string GetState();
         bool CheckMoney(string money);
-        void Cancel(object sender, EventArgs e);
+        void SetDefaultState(object sender, EventArgs e);
+        Dictionary<string, int> GetPriceList();
     }
 }

@@ -20,5 +20,7 @@ namespace MixMachine
         void SendDrink();
 
         Dictionary<string, int> GetPriceList();
+
+        bool  CheckWaterTemperature();
     }
 }

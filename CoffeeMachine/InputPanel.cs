@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CoffeeMachine
 {
@@ -11,7 +12,7 @@ namespace CoffeeMachine
     {
         private GUI _owner;
         public bool _locked;
-        public String _input;
+        public string _input;
         public List<InputButton> _buttonList;
         public event EventHandler ApplyButtonClicked;
         public event EventHandler ClearButtonClicked;
@@ -47,17 +48,38 @@ namespace CoffeeMachine
                 if (pressedKey == "*")
                 {
                     ApplyButtonClicked(_input,new EventArgs());
+                    ClearInputInfo();
+                    return;
                 }
                 if (pressedKey == "#")
                 {
                     ClearButtonClicked(null, new EventArgs());
+                    ClearInputInfo();
                     Thread.Sleep(1000);
+                    return;
                 }
                 _input += pressedKey;
                 _owner._display.InputInfo = _input;
-
             }
         }
+
+        public void uiWidthrowCashButtonClick(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            if (btn != null)
+            {
+                _input += btn.Tag.ToString();
+                ApplyButtonClicked(_input, new EventArgs());
+                _input = "";
+            }
+        }
+
+        private void ClearInputInfo()
+        {
+            _owner._display.InputInfo = String.Empty;
+            _input = String.Empty;
+        }
+
         public void Lock()
         {
             _locked = true;

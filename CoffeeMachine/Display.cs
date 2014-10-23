@@ -15,6 +15,15 @@ namespace CoffeeMachine
         {
             _owner = owner;
         }
+
+        public void ChangeHeatingLight(object sender, EventArgs eventArgs)
+        {
+            var heating = (bool)sender;
+            _owner.uiWaterHeatingControl.BackgroundImage = heating 
+                ? Properties.Resources.red 
+                : Properties.Resources.green;
+        }
+
         /// <summary>
         /// Информация для пользователя
         /// </summary>
@@ -60,5 +69,20 @@ namespace CoffeeMachine
                 _owner.uiDisplayDepositCount.Text = value;
             }
         }
+
+        public String InformationMenu
+        {
+            get
+            {
+                return _owner.uiInformationTextBox.Text;
+            }
+            set
+            {
+                _owner.uiInformationTextBox.SelectionAlignment = HorizontalAlignment.Center;
+                _owner.uiInformationTextBox.Text = value;
+            }
+        }
+
+        
     }
 }
