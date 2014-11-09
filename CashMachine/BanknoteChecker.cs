@@ -14,6 +14,11 @@ namespace CoffeeMachine
 
         public bool Check(Banknote money)
         {
+            var rand = new Random();
+            if (rand.Next(0, 1000) > 950)
+            {
+                return false;
+            }
             return true;
         }
 

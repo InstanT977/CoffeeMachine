@@ -9,9 +9,9 @@ namespace CoffeeMachine
 {
     public class Display
     {
-        private GUI _owner;
+        private GuiForm _owner;
 
-        public Display(GUI owner)
+        public Display(GuiForm owner)
         {
             _owner = owner;
         }

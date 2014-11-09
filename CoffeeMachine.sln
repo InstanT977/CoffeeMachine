@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMachineGUI", "CoffeeMachine\CoffeeMachineGUI.csproj", "{D775F1B3-EB7C-48CE-BB13-007B4766B6C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixMachine", "MixMachine\MixMachine.csproj", "{2B53EC2B-A50D-44A0-A396-A960CF88BE6A}"
@@ -8,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashMachine", "CashMachine\CashMachine.csproj", "{1B87ADC7-8356-4715-8196-C1FB5A8DFEF1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMachine", "CoffeeMachineP\CoffeeMachine.csproj", "{FD8B5973-3D59-423B-B536-BDDBF654BA22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMachineTests", "CoffeeMachineTests\CoffeeMachineTests.csproj", "{A758CBA6-59E8-43A9-8745-F95CD8FECF69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,10 @@ Global
 		{FD8B5973-3D59-423B-B536-BDDBF654BA22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD8B5973-3D59-423B-B536-BDDBF654BA22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD8B5973-3D59-423B-B536-BDDBF654BA22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A758CBA6-59E8-43A9-8745-F95CD8FECF69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A758CBA6-59E8-43A9-8745-F95CD8FECF69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A758CBA6-59E8-43A9-8745-F95CD8FECF69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A758CBA6-59E8-43A9-8745-F95CD8FECF69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

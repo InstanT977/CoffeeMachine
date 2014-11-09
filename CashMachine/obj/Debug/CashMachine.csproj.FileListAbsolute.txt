@@ -8,3 +8,8 @@ C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CashMachine\bin\Debug\Ca
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CashMachine\obj\Debug\CashMachine.csprojResolveAssemblyReference.cache
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CashMachine\obj\Debug\CashMachine.dll
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CashMachine\obj\Debug\CashMachine.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\CashMachine\bin\Debug\CashMachine.dll
+C:\!Work\KursovayaTHIA\CoffeeMachine\CashMachine\bin\Debug\CashMachine.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\CashMachine\obj\Debug\CashMachine.csprojResolveAssemblyReference.cache
+C:\!Work\KursovayaTHIA\CoffeeMachine\CashMachine\obj\Debug\CashMachine.dll
+C:\!Work\KursovayaTHIA\CoffeeMachine\CashMachine\obj\Debug\CashMachine.pdb

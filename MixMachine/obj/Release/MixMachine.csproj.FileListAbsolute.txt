@@ -2,4 +2,9 @@ C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\bin\Release\M
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\bin\Release\MixMachine.pdb
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\obj\Release\MixMachine.dll
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\obj\Release\MixMachine.pdb
-C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\obj\Release\MixMachine.csprojResolveAssemblyReference.cache
+C:\!Work\KursovayaTHIA\CoffeeMachine\BuildArtifacts\MixMachine.dll
+C:\!Work\KursovayaTHIA\CoffeeMachine\BuildArtifacts\MixMachine.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\MixMachine\obj\Release\MixMachine.dll
+C:\!Work\KursovayaTHIA\CoffeeMachine\MixMachine\obj\Release\MixMachine.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\MixMachine\bin\Release\MixMachine.dll
+C:\!Work\KursovayaTHIA\CoffeeMachine\MixMachine\bin\Release\MixMachine.pdb

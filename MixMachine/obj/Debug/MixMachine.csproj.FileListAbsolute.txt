@@ -8,3 +8,8 @@ C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\bin\Debug\Mix
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\obj\Debug\MixMachine.csprojResolveAssemblyReference.cache
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\obj\Debug\MixMachine.dll
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\MixMachine\obj\Debug\MixMachine.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\MixMachine\bin\Debug\MixMachine.dll
+C:\!Work\KursovayaTHIA\CoffeeMachine\MixMachine\bin\Debug\MixMachine.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\MixMachine\obj\Debug\MixMachine.csprojResolveAssemblyReference.cache
+C:\!Work\KursovayaTHIA\CoffeeMachine\MixMachine\obj\Debug\MixMachine.dll
+C:\!Work\KursovayaTHIA\CoffeeMachine\MixMachine\obj\Debug\MixMachine.pdb

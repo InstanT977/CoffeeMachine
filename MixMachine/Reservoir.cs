@@ -49,7 +49,10 @@ namespace MixMachine
 
         public Drink GetDrink(int count)
         {
-
+            if (_currentDrink.DrinkCount - count < 0)
+            {
+                return null;
+            }
             _currentDrink.DrinkCount -= count;
             var tempDrink = new Drink()
             {

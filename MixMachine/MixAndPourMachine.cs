@@ -10,11 +10,9 @@ namespace MixMachine
    public class MixAndPourMachine :IMixMachine
    {
         private WaterContainer _waterContainer;
-        public Reservoirs Reservoirs;
-        public bool IsWork;
-        public List<Recipe> Recipes;
-        public event EventHandler WaterHeating;
-        public CoupContainer CoupContainer;
+        private Reservoirs _reservoirs;
+        private List<Recipe> _recipes;
+        private CoupContainer _coupContainer;
 
 
        public MixAndPourMachine()
@@ -25,12 +23,12 @@ namespace MixMachine
 
        public bool FillReservoirs()
        {
-           foreach (var recipe in Recipes)
+           foreach (var recipe in _recipes)
            {
                foreach (var currentComponent in recipe.Ingridients.Select(ingridient => ingridient.Drink))
                {
-                   Reservoirs.ChangeDrink(currentComponent);
-                   Reservoirs.AddDrink();
+                   _reservoirs.ChangeDrink(currentComponent);
+                   _reservoirs.AddDrink();
                }
            }
            return true;
@@ -39,7 +37,7 @@ namespace MixMachine
        public bool DrinkExists(string code)
        {
            int intCode = Int32.Parse(code);
-           var drink = Recipes.FirstOrDefault(x => x.Name == (DrinkNames)intCode);
+           var drink = _recipes.FirstOrDefault(x => x.Name == (DrinkNames)intCode);
            if (drink != null)
            {
                return true;
@@ -50,7 +48,7 @@ namespace MixMachine
        public bool SetPrice(string code,int newPrice)
        {
            int intCode = Int32.Parse(code);
-           var drink = Recipes.FirstOrDefault(x => x.Name == (DrinkNames)intCode);
+           var drink = _recipes.FirstOrDefault(x => x.Name == (DrinkNames)intCode);
            if (drink != null)
            {
                drink.Price = newPrice;
@@ -62,14 +60,14 @@ namespace MixMachine
 
        private void InitializeComponents()
        {
-           CoupContainer = new CoupContainer();
-           Reservoirs = new Reservoirs();
+           _coupContainer = new CoupContainer();
+           _reservoirs = new Reservoirs();
            _waterContainer = new WaterContainer();
        }
 
        public Dictionary<string,int> GetPriceList()
        {
-           return Recipes.ToDictionary(recipe => recipe.Description, recipe => recipe.Price);
+           return _recipes.ToDictionary(recipe => recipe.Description, recipe => recipe.Price);
        }
 
        public bool CheckWaterTemperature()
@@ -80,8 +78,8 @@ namespace MixMachine
 
        private void InitializeRecepies()
        {
-           Recipes = new List<Recipe>();
-           Recipes.Add(new Recipe
+           _recipes = new List<Recipe>();
+           _recipes.Add(new Recipe
            {
                Description = "Черный кофе",
                Name = DrinkNames.BlackCoffee,
@@ -101,7 +99,7 @@ namespace MixMachine
                ,
                Price = 30
            });
-           Recipes.Add( new Recipe
+           _recipes.Add( new Recipe
            {
                Description = "Капучино",
                Name = DrinkNames.Cappuccino,
@@ -130,7 +128,7 @@ namespace MixMachine
                },
                Price = 50
            });
-           Recipes.Add(new Recipe
+           _recipes.Add(new Recipe
            {
                Description = "Кофе с молоком",
                Name = DrinkNames.CoffeeWithMilk,
@@ -156,7 +154,7 @@ namespace MixMachine
 
            });
 
-           Recipes.Add(new Recipe
+           _recipes.Add(new Recipe
            {
                Description = "Кофе с корицей",
                Name = DrinkNames.CoffeeWithCinnamon,
@@ -180,7 +178,7 @@ namespace MixMachine
                },
                Price = 45
            });
-           Recipes.Add(new Recipe
+           _recipes.Add(new Recipe
            {
                Description = "Крепкий кофе",
                Name = DrinkNames.StrongCoffee,
@@ -204,7 +202,7 @@ namespace MixMachine
                },
                Price = 35
            });
-           Recipes.Add(new Recipe
+           _recipes.Add(new Recipe
            {
                Description = "Турецкий кофе",
                Name = DrinkNames.TurkishCoffee,
@@ -229,7 +227,7 @@ namespace MixMachine
                Price = 60
            });
 
-           Recipes.Add(new Recipe
+           _recipes.Add(new Recipe
            {
                Description = "Кофе без сахара",
                Name = DrinkNames.CoffeeWithoutSugar,
@@ -252,35 +250,35 @@ namespace MixMachine
            { 
             int intCode = Int32.Parse(code);
 
-           var drink = Recipes.FirstOrDefault(x => x.Name == (DrinkNames) intCode);
+           var drink = _recipes.FirstOrDefault(x => x.Name == (DrinkNames) intCode);
 
                foreach (var ingridient in drink.Ingridients)
                {
                    var currentComponent = ingridient.Drink;
-                   Reservoirs.ChangeDrink(currentComponent);
-                   Reservoirs.GetDrink(ingridient.Count);
+                   _reservoirs.ChangeDrink(currentComponent);
+                   _reservoirs.GetDrink(ingridient.Count);
                }
                _waterContainer.Get(CoupContainer.Volume);
-               CoupContainer.GetCoup();
+               _coupContainer.GetCoup();
            }
            return exists;
        }
 
        private bool CheckIngridientsExists(string code)
        {
-           bool result = !CoupContainer.IsEmpty
+           bool result = !_coupContainer.IsEmpty
                     && _waterContainer.CheckWaterContains(CoupContainer.Volume);
                
 
            int intCode = Int32.Parse(code);
-           var drink = Recipes.FirstOrDefault(x => x.Name == (DrinkNames) intCode);
+           var drink = _recipes.FirstOrDefault(x => x.Name == (DrinkNames) intCode);
 
            if (drink != null)
            {
                foreach (var ingr in drink.Ingridients)
                {
-                   Reservoirs.ChangeDrink(ingr.Drink);
-                   result = result && Reservoirs.CheckDrinkExists(ingr.Count);
+                   _reservoirs.ChangeDrink(ingr.Drink);
+                   result = result && _reservoirs.CheckDrinkExists(ingr.Count);
                }
 
                
@@ -300,7 +298,7 @@ namespace MixMachine
            int intCode;
            if (Int32.TryParse(code, out intCode))
            {
-               var drink = Recipes.FirstOrDefault(x => x.Name == (DrinkNames) intCode);
+               var drink = _recipes.FirstOrDefault(x => x.Name == (DrinkNames) intCode);
 
                if (drink != null)
                {

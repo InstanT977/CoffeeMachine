@@ -207,11 +207,15 @@ namespace Machine
 
        private bool InputCodeIsCorrect(string code)
        {
-           if (string.IsNullOrEmpty(code) || code.Contains("*"))
+           var regex = new Regex(@"[0-9]+", RegexOptions.IgnoreCase);
+           var result = regex.IsMatch(code);
+
+           if (string.IsNullOrEmpty(code) || !result)
            {
                ChangeState(StatesOfCoffeeMachine.SIncorrectInput);
                return false;
            }
+          
            return true;
        }
 
@@ -275,7 +279,10 @@ namespace Machine
        private void ChangeState(StatesOfCoffeeMachine newState)
        {
            State = newState;
-           StateChanged(null, new EventArgs());
+           if (StateChanged != null)
+           {
+               StateChanged(null, new EventArgs());
+           }
        }
 
         public string GetState()

@@ -29,7 +29,23 @@ C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\bin\Debug\
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachineP.pdb
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\bin\Debug\MixMachine.pdb
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachineGUI.csprojResolveAssemblyReference.cache
-C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.GUI.resources
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.Properties.Resources.resources
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachineGUI.csproj.GenerateResource.Cache
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\bin\Debug\Resources\red.png
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.GuiForm.resources
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Debug\Resources\red.png
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.exe.config
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.exe
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Debug\CashMachine.dll
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachineP.dll
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Debug\MixMachine.dll
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Debug\CashMachine.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachineP.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Debug\MixMachine.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachineGUI.csprojResolveAssemblyReference.cache
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.GuiForm.resources
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.Properties.Resources.resources
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachineGUI.csproj.GenerateResource.Cache
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.exe
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\obj\Debug\CoffeeMachine.pdb

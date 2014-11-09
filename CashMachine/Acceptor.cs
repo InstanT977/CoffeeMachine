@@ -10,11 +10,11 @@ namespace CashMachine
 {
     public class Acceptor :IAcceptor
     {
-         public bool _isUsed;
-         public bool _fail;
-         public int _account;
-         public List<Banknote> _banknoteList;
-         public BanknoteChecker _banknoteChecker;
+        private bool _isUsed;
+        private bool _fail;
+         private int _account;
+         private List<Banknote> _banknoteList;
+         private BanknoteChecker _banknoteChecker;
 
         public Acceptor()
         {

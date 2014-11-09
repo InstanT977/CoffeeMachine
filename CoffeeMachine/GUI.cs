@@ -13,12 +13,12 @@ using CashMachine;
 using MixMachine;
 namespace CoffeeMachine
 {
-    public partial class GUI : Form
+    public partial class GuiForm : Form
     {
         public ICoffeeMach _coffeeMachine;
         public InputPanel _inputPanel;
         public Display _display;
-        public GUI()
+        public GuiForm()
         {
             InitializeComponent();
             InitializeMainComponents();

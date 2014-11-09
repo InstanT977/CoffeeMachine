@@ -39,7 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CashKeeper.cs" />
     <Compile Include="CoffeeMachine.cs" />
     <Compile Include="ICoffeeMach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,6 +53,9 @@
       <Project>{2B53EC2B-A50D-44A0-A396-A960CF88BE6A}</Project>
       <Name>MixMachine</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CoffeeMachineDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

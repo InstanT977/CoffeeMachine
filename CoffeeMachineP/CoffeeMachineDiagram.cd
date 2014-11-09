@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Machine.CoffeeMachine" BaseTypeListCollapsed="true">
+    <Position X="5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AICAAEAQBAAAxRAQAABkAKAAFAACAAAigCIABRAAQGI=</HashCode>
+      <FileName>CoffeeMachine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_acceptor" />
+      <Field Name="_mixMachine" />
+      <Field Name="State" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Machine.ICoffeeMach">
+    <Position X="8" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAEAQAAAAAQAAAAAAACAAAAAAAAAggAAAAAAAQCI=</HashCode>
+      <FileName>ICoffeeMach.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CashMachine.IAcceptor">
+    <Position X="8.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="MixMachine.IMixMachine">
+    <Position X="8.75" Y="4.5" Width="2.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Enum Name="CoffeeMachine.StatesOfCoffeeMachine">
+    <Position X="1.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAEQQQAAGBAAAAAIAEIGAAAAAAAAIAAAAAgAAAA=</HashCode>
+      <FileName>StatesOfCoffeeMachine.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

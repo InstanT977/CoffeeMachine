@@ -8,9 +8,29 @@ C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\bin\Releas
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\bin\Release\CoffeeMachineP.pdb
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\bin\Release\MixMachine.pdb
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Release\CoffeeMachineGUI.csprojResolveAssemblyReference.cache
-C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Release\CoffeeMachine.GUI.resources
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Release\CoffeeMachine.Properties.Resources.resources
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Release\CoffeeMachineGUI.csproj.GenerateResource.Cache
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Release\CoffeeMachine.exe
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Release\CoffeeMachine.pdb
 C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\bin\Release\Resources\red.png
+C:\!Work\Курсовая+лабы ТХЯ\CoffeeMachine\CoffeeMachine\obj\Release\CoffeeMachine.GuiForm.resources
+C:\!Work\KursovayaTHIA\CoffeeMachine\BuildArtifacts\Resources\red.png
+C:\!Work\KursovayaTHIA\CoffeeMachine\BuildArtifacts\CoffeeMachine.exe.config
+C:\!Work\KursovayaTHIA\CoffeeMachine\BuildArtifacts\CoffeeMachine.exe
+C:\!Work\KursovayaTHIA\CoffeeMachine\BuildArtifacts\CoffeeMachine.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\obj\Release\CoffeeMachineGUI.csprojResolveAssemblyReference.cache
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\obj\Release\CoffeeMachine.GuiForm.resources
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\obj\Release\CoffeeMachine.Properties.Resources.resources
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\obj\Release\CoffeeMachineGUI.csproj.GenerateResource.Cache
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\obj\Release\CoffeeMachine.exe
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\obj\Release\CoffeeMachine.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Release\CoffeeMachine.exe.config
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Release\Resources\red.png
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Release\CoffeeMachine.exe
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Release\CoffeeMachine.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Release\CashMachine.dll
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Release\CoffeeMachineP.dll
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Release\MixMachine.dll
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Release\CashMachine.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Release\CoffeeMachineP.pdb
+C:\!Work\KursovayaTHIA\CoffeeMachine\CoffeeMachine\bin\Release\MixMachine.pdb

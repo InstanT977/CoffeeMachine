@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CashMachine.Acceptor" BaseTypeListCollapsed="true">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAEQAAAAAAAQABAAAAAAAAAABEAAAAAAAQ=</HashCode>
+      <FileName>Acceptor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_banknoteChecker" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_banknoteList" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CoffeeMachine.Banknote">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Banknote.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeMachine.BanknoteChecker">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAgAAAAAAAACAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>BanknoteChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="CashMachine.IAcceptor">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAABAAAAAAAAAABEAAAAAAAA=</HashCode>
+      <FileName>IAcceptor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

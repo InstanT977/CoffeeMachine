@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace CoffeeMachine
 {
-    partial class GUI
+    partial class GuiForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace CoffeeMachine
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GuiForm));
             this.uiDisplayDepositCount = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.uiWaterHeatingControl = new System.Windows.Forms.PictureBox();

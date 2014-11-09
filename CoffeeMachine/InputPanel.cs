@@ -10,7 +10,7 @@ namespace CoffeeMachine
 {
     public class InputPanel
     {
-        private GUI _owner;
+        private GuiForm _owner;
         public bool _locked;
         public string _input;
         public List<InputButton> _buttonList;
@@ -22,7 +22,7 @@ namespace CoffeeMachine
         //    if (handler != null) handler(null, EventArgs.Empty);
         //}
 
-        public InputPanel(GUI owner)
+        public InputPanel(GuiForm owner)
         {
             InitializeButtons();
             _owner = owner;
